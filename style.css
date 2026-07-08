@@ -205,3 +205,13 @@ text-transform:uppercase;
 text-align:center;
 
 }
+
+.menu a.activo{
+
+color:#F1E5CF;
+
+border-bottom:2px solid #C39B63;
+
+padding-bottom:4px;
+
+}
