@@ -365,3 +365,21 @@ padding-top:20px;
 border-top:1px solid #433424;
 
 }
+
+.alucinacion-titulo{
+
+text-align:center;
+
+font-size:48px;
+
+font-family:'Exo 2',sans-serif;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+color:#F1E5CF;
+
+margin:40px 0;
+
+}
