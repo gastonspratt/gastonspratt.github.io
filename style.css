@@ -462,3 +462,17 @@ transform:scale(1.02);
     border:1px solid #5a4a32;
     flex-shrink:0;
 }
+
+@media (max-width:800px){
+
+.obra{
+    display:block;
+}
+
+.portada{
+    display:block;
+    margin:0 auto 30px;
+    width:220px;
+}
+
+}
