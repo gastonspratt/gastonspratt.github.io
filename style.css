@@ -399,3 +399,31 @@ font-size:14px;
 letter-spacing:1px;
 
 }
+
+.estado-archivo{
+
+display:grid;
+
+grid-template-columns:220px 1fr;
+
+row-gap:12px;
+
+column-gap:20px;
+
+font-family:'IBM Plex Mono',monospace;
+
+}
+
+.estado-archivo span{
+
+color:#9A8467;
+
+}
+
+.estado-archivo strong{
+
+color:#F1E5CF;
+
+font-weight:500;
+
+}
