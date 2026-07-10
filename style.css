@@ -476,3 +476,65 @@ transform:scale(1.02);
 }
 
 }
+
+.obra{
+
+display:grid;
+
+grid-template-columns:260px 1fr;
+
+gap:40px;
+
+align-items:start;
+
+margin-top:25px;
+
+}
+
+.portada{
+
+width:240px;
+
+height:auto;
+
+display:block;
+
+margin:auto;
+
+border-radius:8px;
+
+border:1px solid #433424;
+
+box-shadow:0 0 20px rgba(0,0,0,.35);
+
+transition:.25s;
+
+}
+
+.portada:hover{
+
+transform:scale(1.02);
+
+}
+
+.obra-info p{
+
+margin-top:18px;
+
+}
+
+@media(max-width:850px){
+
+.obra{
+
+grid-template-columns:1fr;
+
+}
+
+.portada{
+
+margin-bottom:25px;
+
+}
+
+}
