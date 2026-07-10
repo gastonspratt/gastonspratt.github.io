@@ -429,23 +429,13 @@ font-weight:500;
 }
 
 .portada{
-
-display:block;
-
-max-width:320px;
-
-width:100%;
-
-margin:0 auto 30px;
-
-border:1px solid #433424;
-
-border-radius:8px;
-
-box-shadow:0 0 18px rgba(0,0,0,.4);
-
-transition:.25s;
-
+    display:block;
+    width:220px;
+    max-width:100%;
+    height:auto;
+    margin:25px auto;
+    border:1px solid #5a4a32;
+    border-radius:6px;
 }
 
 .portada:hover{
