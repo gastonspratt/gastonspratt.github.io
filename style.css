@@ -543,20 +543,12 @@ margin-bottom:25px;
 
 margin-top:80px;
 
-padding-top:30px;
+padding:40px 0;
 
 border-top:1px solid #433424;
 
 text-align:center;
 
-font-family:'IBM Plex Mono',monospace;
-
-font-size:12px;
-
-letter-spacing:2px;
-
-color:#8A6D4B;
-
-line-height:2;
+opacity:.85;
 
 }
