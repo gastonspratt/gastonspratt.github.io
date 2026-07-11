@@ -1,431 +1,149 @@
+/* ===========================
+   GENERAL
+=========================== */
+
 body{
-
-background:#050608;
-
-color:#D7C7AE;
-
-font-family:'IBM Plex Sans',sans-serif;
-
-max-width:1100px;
-
-margin:auto;
-
-padding:30px 60px 80px;
-
-line-height:1.8;
-
-}
-
-h1{
-
-font-size:52px;
-
-font-family:'Exo 2',sans-serif;
-
-font-weight:700;
-
-color:#F1E5CF;
-
-margin-top:0;
-
-margin-bottom:14px;
-
-text-transform:uppercase;
-
-}
-
-h2{
-
-font-size:22px;
-
-font-weight:300;
-
-letter-spacing:2px;
-
-color:#D0A56A;
-
-margin-bottom:40px;
-
+    background:#050608;
+    color:#D7C7AE;
+    font-family:'IBM Plex Sans',sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:30px 60px 80px;
+    line-height:1.8;
 }
 
 h1,h2,h3{
-
-font-family:'Exo 2',sans-serif;
-
+    font-family:'Exo 2',sans-serif;
 }
 
-.estado{
-
-font-size:11px;
-
-letter-spacing:4px;
-
-color:#B88A57;
-
-text-transform:uppercase;
-
-margin-bottom:12px;
-
+h1{
+    font-size:52px;
+    font-weight:700;
+    color:#F1E5CF;
+    text-transform:uppercase;
+    margin:0 0 14px;
 }
 
-.subtitulo{
-
-font-size:14px;
-
-letter-spacing:2px;
-
-color:#BFAF97;
-
-margin-bottom:12px;
-
-}
-
-.frase{
-
-color:#978D80;
-
-margin-bottom:40px;
-
-}
-
-.menu{
-
-display:flex;
-
-gap:24px;
-
-margin-bottom:28px;
-
-flex-wrap:wrap;
-
-align-items:center;
-
-}
-
-.menu a{
-
-text-decoration:none;
-
-color:#C39B63;
-
-font-size:13px;
-
-font-weight:500;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-transition:.2s;
-
-}
-
-.menu a:hover{
-
-color:#F0D3A0;
-
-}
-
-.section{
-
-margin-top:30px;
-
-padding:35px;
-
-background:#0B1117;
-
-border:1px solid #433424;
-
-border-left:4px solid #B78A58;
-
-border-radius:10px;
-
-}
-
-.terminal-title{
-
-font-family:'IBM Plex Mono',monospace;
-
-font-size:13px;
-
-letter-spacing:3px;
-
-color:#B88A57;
-
-text-transform:uppercase;
-
-margin-bottom:25px;
-
-}
-
-.terminal{
-
-font-family:'IBM Plex Mono',monospace;
-
-font-size:14px;
-
-line-height:2;
-
-}
-
-.barra{
-
-color:#C89A5A;
-
-}
-
-.online{
-
-color:#D8B27A;
-
-font-weight:600;
-
-}
-
-.timestamp{
-
-color:#9A8467;
-
-font-size:13px;
-
-}
-
-.metadata{
-
-font-family:'IBM Plex Mono',monospace;
-
-font-size:12px;
-
-letter-spacing:3px;
-
-color:#8A6D4B;
-
-text-transform:uppercase;
-
-text-align:center;
-
-}
-
-.menu a.activo{
-
-color:#F1E5CF;
-
-border-bottom:2px solid #C39B63;
-
-padding-bottom:4px;
-
+h2{
+    font-size:22px;
+    font-weight:300;
+    letter-spacing:2px;
+    color:#D0A56A;
+    margin-bottom:40px;
 }
 
 h3{
+    font-size:30px;
+    color:#EEDFCB;
+    margin:0 0 22px;
+}
 
-font-size:30px;
+.estado{
+    font-size:11px;
+    letter-spacing:4px;
+    color:#B88A57;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
 
-color:#EEDFCB;
+.subtitulo{
+    font-size:14px;
+    letter-spacing:2px;
+    color:#BFAF97;
+    margin-bottom:12px;
+}
 
-margin-top:0;
+.frase{
+    color:#978D80;
+    margin-bottom:40px;
+}
 
-margin-bottom:22px;
+/* ===========================
+   MENÚ
+=========================== */
 
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-bottom:28px;
+}
+
+.menu a{
+    color:#C39B63;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+    transition:.2s;
+}
+
+.menu a:hover{
+    color:#F0D3A0;
+}
+
+.menu a.activo{
+    color:#F1E5CF;
+    border-bottom:2px solid #C39B63;
+    padding-bottom:4px;
+}
+
+/* ===========================
+   PANELES
+=========================== */
+
+.section{
+    margin-top:30px;
+    padding:35px;
+    background:#0B1117;
+    border:1px solid #433424;
+    border-left:4px solid #B78A58;
+    border-radius:10px;
 }
 
 .section p{
-
-color:#D7C7AE;
-
+    color:#D7C7AE;
 }
 
 .section strong{
-
-color:#E3C89A;
-
+    color:#E3C89A;
 }
 
 .section em{
-
-color:#C89A5A;
-
+    color:#C89A5A;
 }
 
-.biografia{
+/* ===========================
+   TERMINAL
+=========================== */
 
-max-width:900px;
-
+.terminal{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:14px;
+    line-height:2;
 }
 
-.biografia p{
-
-font-size:16px;
-
-line-height:1.95;
-
-color:#D3C7B3;
-
-margin-bottom:20px;
-
+.terminal-title{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:3px;
+    color:#B88A57;
+    text-transform:uppercase;
+    margin-bottom:25px;
 }
 
-.tag{
-
-display:inline-block;
-
-padding:8px 14px;
-
-margin:0 10px 10px 0;
-
-background:#18140F;
-
-border:1px solid #3A3027;
-
-border-radius:30px;
-
-color:#D8C9B4;
-
-font-size:14px;
-
-transition:.2s;
-
+.timestamp{
+    color:#9A8467;
+    font-size:13px;
 }
 
-.tag:hover{
-
-background:#221B14;
-
-border-color:#B78A58;
-
-color:#F0D3A0;
-
+.online{
+    color:#D8B27A;
+    font-weight:600;
 }
 
-.poema{
-
-font-family:'IBM Plex Mono',monospace;
-
-font-size:15px;
-
-line-height:2.1;
-
-color:#D8C7AF;
-
-text-align:center;
-
-}
-
-.manifiesto{
-
-font-family:'Exo 2',sans-serif;
-
-font-size:24px;
-
-font-weight:500;
-
-line-height:1.6;
-
-color:#E8D7BC;
-
-margin-bottom:25px;
-
-}
-
-.sistema{
-
-margin-top:25px;
-
-padding:20px;
-
-background:#0E131B;
-
-border-left:2px solid #C39B63;
-
-border-radius:8px;
-
-font-family:'Exo 2',sans-serif;
-
-font-size:13px;
-
-letter-spacing:1px;
-
-line-height:1.9;
-
-color:#D9C49A;
-
-}
-
-.sistema p{
-
-margin:8px 0;
-
-}
-
-.giscus-panel{
-
-margin-top:25px;
-
-padding-top:20px;
-
-border-top:1px solid #433424;
-
-}
-
-.alucinacion-titulo{
-
-text-align:center;
-
-font-size:30px;
-
-font-family:'Exo 2',sans-serif;
-
-font-weight:700;
-
-text-transform:uppercase;
-
-color:#EEDFCB;
-
-margin:0 0 22px;
-
-}
-
-.firma{
-
-text-align:center;
-
-margin-top:40px;
-
-color:#B88A57;
-
-font-family:'IBM Plex Mono',monospace;
-
-font-size:14px;
-
-letter-spacing:1px;
-
-}
-
-.estado-archivo{
-
-display:grid;
-
-grid-template-columns:220px 1fr;
-
-row-gap:12px;
-
-column-gap:20px;
-
-font-family:'IBM Plex Mono',monospace;
-
-}
-
-.estado-archivo span{
-
-color:#9A8467;
-
-}
-
-.estado-archivo strong{
-
-color:#F1E5CF;
-
-font-weight:500;
-
+.barra{
+    color:#C89A5A;
 }
 
 /* ===========================
@@ -447,7 +165,6 @@ font-weight:500;
 
 .portada{
     width:220px;
-    height:auto;
     display:block;
     border:1px solid #433424;
     border-radius:8px;
@@ -468,7 +185,127 @@ font-weight:500;
     margin-top:18px;
 }
 
-@media (max-width:850px){
+/* ===========================
+   ALUCINACIONES
+=========================== */
+
+.alucinaciones-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:start;
+}
+
+.alucinacion-card{
+    margin:0;
+}
+
+.alucinacion-titulo{
+    text-align:center;
+    font-size:30px;
+    font-weight:700;
+    color:#EEDFCB;
+    text-transform:uppercase;
+    margin:0 0 22px;
+}
+
+.poema{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:15px;
+    line-height:2.1;
+    text-align:center;
+}
+
+.firma{
+    text-align:center;
+    margin-top:40px;
+    color:#B88A57;
+    font-family:'IBM Plex Mono',monospace;
+}
+
+/* ===========================
+   BIO
+=========================== */
+
+.biografia{
+    max-width:900px;
+}
+
+.biografia p{
+    font-size:16px;
+    line-height:1.95;
+}
+
+.tag{
+    display:inline-block;
+    padding:8px 14px;
+    margin:0 10px 10px 0;
+    background:#18140F;
+    border:1px solid #3A3027;
+    border-radius:30px;
+    transition:.2s;
+}
+
+.tag:hover{
+    border-color:#B78A58;
+}
+
+/* ===========================
+   SISTEMA
+=========================== */
+
+.sistema{
+    margin-top:25px;
+    padding:20px;
+    background:#0E131B;
+    border-left:2px solid #C39B63;
+    border-radius:8px;
+}
+
+/* ===========================
+   ENLACES
+=========================== */
+
+.section a{
+    color:#D8B27A;
+    text-decoration:none;
+    transition:.2s;
+}
+
+.section a:hover{
+    color:#F1E5CF;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.terminal-footer{
+    text-align:center;
+}
+
+.terminal-footer .datos{
+    display:inline-block;
+    text-align:left;
+    margin-bottom:40px;
+}
+
+.metadata{
+    text-align:center;
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:3px;
+    color:#8A6D4B;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:900px){
+
+    body{
+        padding:25px;
+    }
 
     .obra{
         grid-template-columns:1fr;
@@ -483,70 +320,8 @@ font-weight:500;
         margin:auto;
     }
 
-   .terminal-footer{
-
-width:100%;
-
-text-align:center;
-
-}
-
-.terminal-footer .datos{
-
-display:inline-block;
-
-text-align:left;
-
-margin-bottom:40px;
-
-}
-
-.section a{
-
-color:#D8B27A;
-
-text-decoration:none;
-
-font-weight:500;
-
-transition:.2s;
-
-}
-
-.section a:hover{
-
-color:#F1E5CF;
-
-}
-
-.alucinaciones-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:30px;
-
-align-items:start;
-
-margin-top:30px;
-
-}
-
-.alucinacion-card{
-
-margin:0;
-
-height:100%;
-
-}
-
-@media (max-width:900px){
-
-.alucinaciones-grid{
-
-grid-template-columns:1fr;
-
-}
+    .alucinaciones-grid{
+        grid-template-columns:1fr;
+    }
 
 }
