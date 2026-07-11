@@ -483,23 +483,3 @@ font-weight:500;
         margin:auto;
     }
 
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-
-.footer{
-    margin:70px 0 20px;
-    padding-top:30px;
-    border-top:1px solid #433424;
-}
-
-.footer .terminal-title{
-    text-align:center;
-}
-
-.footer .terminal{
-    display:table;
-    margin:20px auto 0;
-}
