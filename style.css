@@ -501,3 +501,20 @@ margin-bottom:40px;
 
 }
 
+.section a{
+
+color:#D8B27A;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.2s;
+
+}
+
+.section a:hover{
+
+color:#F1E5CF;
+
+}
