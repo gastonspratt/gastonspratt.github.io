@@ -483,3 +483,21 @@ font-weight:500;
         margin:auto;
     }
 
+   .terminal-footer{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.terminal-footer .datos{
+
+display:inline-block;
+
+text-align:left;
+
+margin-bottom:40px;
+
+}
+
