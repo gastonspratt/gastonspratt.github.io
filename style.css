@@ -518,3 +518,35 @@ transition:.2s;
 color:#F1E5CF;
 
 }
+
+.alucinaciones-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+align-items:start;
+
+margin-top:30px;
+
+}
+
+.alucinacion-card{
+
+margin:0;
+
+height:100%;
+
+}
+
+@media (max-width:900px){
+
+.alucinaciones-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
