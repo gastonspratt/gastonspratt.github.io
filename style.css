@@ -281,13 +281,22 @@ h3{
 =========================== */
 
 .terminal-footer{
-    text-align:center;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
 }
 
 .terminal-footer .datos{
-    display:inline-block;
-    text-align:left;
-    margin-bottom:40px;
+
+font-family:'IBM Plex Mono',monospace;
+font-size:14px;
+line-height:2;
+text-align:left;
+display:inline-block;
+margin-bottom:35px;
+
 }
 
 .metadata{
