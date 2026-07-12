@@ -354,3 +354,45 @@ border-radius:8px;
 box-shadow:0 0 20px rgba(0,0,0,.35);
 
 }
+
+.manifiesto-box{
+
+display:grid;
+
+grid-template-columns:1fr 240px;
+
+gap:50px;
+
+align-items:center;
+
+}
+
+.manifiesto-texto{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.foto-biografia{
+
+width:240px;
+
+height:240px;
+
+object-fit:cover;
+
+border-radius:8px;
+
+border:1px solid #433424;
+
+box-shadow:0 0 20px rgba(0,0,0,.35);
+
+justify-self:end;
+
+margin:0;
+
+}
