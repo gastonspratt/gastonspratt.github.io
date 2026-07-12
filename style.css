@@ -334,3 +334,23 @@ margin-bottom:35px;
     }
 
 }
+
+.foto-biografia{
+
+display:block;
+
+width:280px;
+
+max-width:100%;
+
+height:auto;
+
+margin:0 auto 35px;
+
+border-radius:8px;
+
+border:1px solid #433424;
+
+box-shadow:0 0 20px rgba(0,0,0,.35);
+
+}
