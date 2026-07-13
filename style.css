@@ -393,3 +393,17 @@ justify-self:end;
 margin:0;
 
 }
+
+.hero-map{
+    width:100%;
+    border:1px solid var(--border);
+    border-radius:8px;
+    overflow:hidden;
+    margin:2rem 0;
+}
+
+.hero-map img{
+    display:block;
+    width:100%;
+    height:auto;
+}
