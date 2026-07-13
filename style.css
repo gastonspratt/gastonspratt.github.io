@@ -407,3 +407,37 @@ margin:0;
     width:100%;
     height:auto;
 }
+
+.hero-map{
+    margin-top:40px;
+    border:1px solid #8e6d46;
+    border-radius:8px;
+    overflow:hidden;
+    background:#11161d;
+}
+
+.hero-map img{
+    width:100%;
+    display:block;
+}
+
+.panel-label{
+    padding:24px 24px 8px;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    color:#b99362;
+}
+
+.panel-heading{
+    margin:0 24px 24px;
+    font-size:2rem;
+    text-transform:uppercase;
+    color:#e6dccd;
+}
+
+.hero-caption{
+    padding:16px;
+    text-align:center;
+    color:#b99362;
+    border-top:1px solid rgba(185,147,98,.35);
+}
