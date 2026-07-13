@@ -441,3 +441,27 @@ margin:0;
     color:#b99362;
     border-top:1px solid rgba(185,147,98,.35);
 }
+
+.section-heading{
+    font-family:'Exo 2',sans-serif;
+    font-size:2.3rem;
+    font-weight:700;
+    text-transform:uppercase;
+    margin:0 0 2rem;
+    color:#e9dece;
+}
+
+.mapa-neuma{
+    display:block;
+    width:100%;
+    margin:2rem 0 .75rem;
+    border:1px solid #8e6d46;
+    border-radius:6px;
+}
+
+.mapa-caption{
+    text-align:center;
+    font-size:.85rem;
+    color:#c9a97a;
+    margin:0;
+}
