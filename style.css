@@ -328,13 +328,11 @@ margin-bottom:35px;
         grid-template-columns:1fr;
     }
 
-}
-
 .manifiesto{
     display:flex;
+    align-items:center;
     justify-content:space-between;
-    align-items:center;   /* centra verticalmente */
-    gap:3rem;
+    gap:50px;
 }
 
 .manifiesto-texto{
@@ -342,14 +340,13 @@ margin-bottom:35px;
 }
 
 .manifiesto-foto{
-    flex:0 0 220px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width:340px;
+    flex-shrink:0;
 }
 
 .manifiesto-foto img{
-    width:220px;
+    width:100%;
+    display:block;
     border-radius:8px;
     border:1px solid #8e6d46;
 }
