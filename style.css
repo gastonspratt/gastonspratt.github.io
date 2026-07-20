@@ -328,6 +328,8 @@ margin-bottom:35px;
         grid-template-columns:1fr;
     }
 
+} 
+
 .manifiesto{
     display:flex;
     align-items:center;
