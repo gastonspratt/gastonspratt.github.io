@@ -351,3 +351,50 @@ footer{
     }
 
 }
+
+.archive-loader{
+position:fixed;
+inset:0;
+background:#000;
+z-index:9999;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding-left:8%;
+font-family:'IBM Plex Mono',monospace;
+color:#b87a3a;
+font-size:1rem;
+animation:archivoSalida 1s ease forwards;
+animation-delay:3.5s;
+}
+
+.archive-loader p{
+opacity:0;
+animation:lineaArchivo .4s forwards;
+}
+
+.archive-loader p:nth-child(1){animation-delay:.3s}
+.archive-loader p:nth-child(2){animation-delay:.8s}
+.archive-loader p:nth-child(3){animation-delay:1.3s}
+.archive-loader p:nth-child(4){animation-delay:1.8s}
+.archive-loader p:nth-child(5){animation-delay:2.3s}
+
+
+@keyframes lineaArchivo{
+from{
+opacity:0;
+transform:translateX(-20px);
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+
+
+@keyframes archivoSalida{
+to{
+opacity:0;
+visibility:hidden;
+}
+}
