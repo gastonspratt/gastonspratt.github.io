@@ -325,4 +325,39 @@ footer{
         font-size:2.3rem;
     }
 
+/* CORRECCION HERO FINAL */
+
+.hero .container,
+.hero-layout{
+    width:92%;
+    max-width:1500px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:45% 55%;
+    align-items:center;
+    min-height:calc(100vh - 80px);
+}
+
+
+.hero-text{
+    grid-column:1;
+}
+
+
+.hero-image{
+    grid-column:2;
+    grid-row:1;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+
+.hero-image img{
+    width:100%;
+    max-width:900px;
+    height:auto;
+    object-fit:contain;
+}
+
 }
