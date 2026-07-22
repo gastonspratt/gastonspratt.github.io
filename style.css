@@ -129,12 +129,8 @@ nav{
 
 
 .hero h1{
-    font-family:'Exo 2',sans-serif;
-    font-size:clamp(5rem,9vw,9rem);
-    line-height:.8;
-    letter-spacing:-5px;
-    color:var(--title);
-    margin-bottom:35px;
+    font-size:clamp(4rem,7vw,7rem);
+    line-height:.85;
 }
 
 
@@ -159,9 +155,8 @@ nav{
 
 
 .hero-image img{
-    width:100%;
-    max-width:850px;
-    object-fit:contain;
+    max-width:760px;
+    transform:translateY(-40px);
 }
 
 
