@@ -355,4 +355,29 @@ footer{
     object-fit:contain;
 }
 
+.hero{
+    min-height:100vh;
+    align-items:center;
+}
+
+
+.hero-image img{
+    max-width:720px;
+    transform:translateY(-20px);
+}
+
+
+.hero-text{
+    padding-bottom:80px;
+}
+
+
+.manifesto{
+    margin-top:35px;
+    padding:25px;
+    border:1px solid rgba(184,122,58,.35);
+    border-radius:15px;
+    max-width:520px;
+}
+
 }
