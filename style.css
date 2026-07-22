@@ -28,10 +28,13 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem
 .menu a{color:var(--muted)}
 .menu a:hover{color:var(--accent)}
 
-.hero{min-height:90vh;display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center;padding:5rem 0}
-.hero h1{font:800 clamp(3rem,7vw,6rem)/.95 'Exo 2',sans-serif;color:var(--title);margin-bottom:1.5rem}
-.hero p{max-width:60ch;font-size:1.1rem}
-.hero-image img{border:1px solid var(--border);border-radius:var(--radius)}
+.hero{
+    min-height:calc(100vh - 70px);
+    display:grid;
+    grid-template-columns:48% 52%;
+    align-items:end;
+    gap:0;
+}
 
 .section{padding:6rem 0}
 .section-title{font:700 clamp(2rem,4vw,3.5rem) 'Exo 2',sans-serif;color:var(--title);margin-bottom:2rem}
