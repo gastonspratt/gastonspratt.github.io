@@ -427,3 +427,36 @@ visibility:hidden;
 .record-table td:last-child{
     color:#ddd;
 }
+
+.archive-divider{
+border:none;
+height:1px;
+background:rgba(184,122,58,.2);
+margin:40px 0;
+}
+
+.influences-columns{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:50px;
+margin-top:30px;
+}
+
+.influences-columns h3{
+margin-bottom:16px;
+color:var(--accent);
+font-size:1rem;
+letter-spacing:.08em;
+text-transform:uppercase;
+}
+
+.influences-columns ul{
+list-style:none;
+padding:0;
+margin:0 0 35px;
+}
+
+.influences-columns li{
+padding:8px 0;
+border-bottom:1px solid rgba(184,122,58,.12);
+}
