@@ -401,3 +401,29 @@ opacity:0;
 visibility:hidden;
 }
 }
+
+.record-table{
+    width:100%;
+    border-collapse:collapse;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.95rem;
+}
+
+.record-table tr{
+    border-bottom:1px solid rgba(184,122,58,.18);
+}
+
+.record-table td{
+    padding:12px 0;
+}
+
+.record-table td:first-child{
+    color:var(--accent);
+    width:42%;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.record-table td:last-child{
+    color:#ddd;
+}
