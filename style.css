@@ -460,3 +460,51 @@ margin:0 0 35px;
 padding:8px 0;
 border-bottom:1px solid rgba(184,122,58,.12);
 }
+
+.final-panel{
+text-align:center;
+}
+
+.status-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin:45px 0;
+padding:25px 0;
+border-top:1px solid rgba(184,122,58,.15);
+border-bottom:1px solid rgba(184,122,58,.15);
+}
+
+.status-grid span{
+display:block;
+font-family:'IBM Plex Mono',monospace;
+font-size:.75rem;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--accent);
+margin-bottom:10px;
+}
+
+.status-grid strong{
+font-size:1rem;
+font-weight:600;
+color:#fff;
+}
+
+.final-panel blockquote{
+margin:50px auto 10px;
+max-width:720px;
+font-size:1.15rem;
+font-style:italic;
+line-height:1.7;
+color:#ddd;
+}
+
+@media (max-width:900px){
+
+.status-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+}
