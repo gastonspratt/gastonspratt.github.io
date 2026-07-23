@@ -1008,3 +1008,99 @@ footer{
     }
 
 }
+
+/*==================================================
+  OBRAS
+==================================================*/
+
+.works-grid{
+    display:flex;
+    flex-direction:column;
+    gap:48px;
+    margin-top:48px;
+}
+
+.work-card{
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:40px;
+    align-items:start;
+
+    padding:32px;
+
+    border:1px solid rgba(184,122,58,.25);
+
+    background:#0d0d0d;
+
+    transition:.3s;
+}
+
+.work-card:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+}
+
+.work-cover{
+    width:100%;
+    display:block;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 0 30px rgba(0,0,0,.35);
+}
+
+.work-content h3{
+    margin:12px 0 18px;
+}
+
+.work-content p{
+    margin-bottom:22px;
+}
+
+.terminal{
+
+    font-family:"IBM Plex Mono", monospace;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+    background:#090909;
+
+    border-left:4px solid var(--accent);
+
+    padding:18px 22px;
+
+    color:#d7d7d7;
+
+    margin-top:22px;
+
+}
+
+.barra{
+
+    color:var(--accent);
+
+    letter-spacing:1px;
+
+    font-weight:700;
+
+}
+
+@media(max-width:900px){
+
+.work-card{
+
+grid-template-columns:1fr;
+
+}
+
+.work-cover{
+
+max-width:320px;
+
+margin:auto;
+
+}
+
+}
