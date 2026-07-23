@@ -95,8 +95,8 @@ nav{
 /* HERO */
 
 .hero{
-    min-height:100vh;
-    padding:75px 0 80px;
+    min-height:calc(100vh - 80px);
+    padding:0;
 }
 
 
@@ -104,8 +104,9 @@ nav{
     display:grid;
     grid-template-columns:1.05fr .95fr;
     gap:40px;
-    align-items:center;
+    align-items:start;
     min-height:calc(100vh - 80px);
+    padding-top:80px;
 }
 
 
@@ -164,7 +165,7 @@ nav{
     width:100%;
     max-width:820px;
     object-fit:contain;
-    transform:translateY(-75px);
+    transform:translateY(-100px);
 }
 
 
