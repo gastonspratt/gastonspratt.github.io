@@ -1215,3 +1215,49 @@ footer{
     border-radius:10px;
 
 }
+
+.piece-title{
+
+    text-align:center;
+
+    font-family:'Exo 2',sans-serif;
+
+    color:var(--title);
+
+    font-size:3rem;
+
+    margin:40px 0;
+
+}
+
+
+.piece-frame{
+
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding:24px;
+
+    background:var(--panel);
+
+    border:1px solid rgba(184,122,58,.65);
+
+    border-radius:18px;
+
+    box-shadow:0 0 30px rgba(0,0,0,.35);
+
+}
+
+
+.piece-image{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    border-radius:10px;
+
+}
