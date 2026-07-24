@@ -1173,3 +1173,19 @@ footer{
     }
 
 }
+
+.piece-image{
+
+display:block;
+
+width:100%;
+
+max-width:900px;
+
+margin:50px auto;
+
+border-radius:18px;
+
+border:1px solid rgba(184,122,58,.25);
+
+}
