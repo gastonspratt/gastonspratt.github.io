@@ -1176,16 +1176,40 @@ footer{
 
 .piece-image{
 
-display:block;
+    display:block;
 
-width:100%;
+    width:100%;
 
-max-width:900px;
+    height:auto;
 
-margin:50px auto;
+    border-radius:10px;
 
-border-radius:18px;
+}
 
-border:1px solid rgba(184,122,58,.25);
+.piece-frame{
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    padding:18px;
+
+    background:var(--panel);
+
+    border:1px solid rgba(184,122,58,.45);
+
+    border-radius:18px;
+
+}
+
+.piece-image{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    border-radius:10px;
 
 }
