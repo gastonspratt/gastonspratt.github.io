@@ -4,151 +4,128 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gastón Spratt</title>
+<title>Bitácora | Gastón Spratt</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body>
 
+<div class="archive-loader">
+
+<p>CONSULTANDO CATÁLOGO...</p>
+<p>BITÁCORA</p>
+<p>NIVEL_6</p>
+<p>REGISTROS DISPONIBLES</p>
+<p>ACCESO CONCEDIDO</p>
+
+</div>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a href="index.html" class="logo">
+GASTÓN SPRATT
+</a>
+
 <div class="menu">
 
-<a href="index.html">ARCHIVO CENTRAL</a>
-
-<a href="bitacora.html" class="activo">BITÁCORA</a>
-
-<a href="alucinaciones.html">ALUCINACIONES</a>
-
-<a href="obras.html">OBRAS</a>
-
+<a href="index.html">Inicio</a>
+<a href="biografia.html">Biografía</a>
+<a href="obras.html">Obras</a>
 <a href="fdch.html">FDCH</a>
-
-<a href="biografia.html">BIOGRAFÍA</a>
-
-<a href="contacto.html">CONTACTO</a>
-
-</div>
-
-<h1>Gastón Spratt</h1>
-
-<p class="estado">
-ARCHIVO_PERSONAL · NIVEL_2
-</p>
-
-<p class="subtitulo">
-ESCRITOR · PADRE · HACEDOR DE MUNDOS
-</p>
-
-<p class="frase">
-MEMORIA · IDENTIDAD · PERSISTENCIA
-</p>
-
-  <div class="section">
-
-<p class="terminal-title">
-// REGISTRO_0002
-</p>
-
-<h3>
-07 · JUL · 2026
-</h3>
-
-<div class="terminal">
-
-<p>
-Nivel de alucinación
-</p>
-
-<p class="barra">███████░░░ 74%</p>
-
-<br>
-
-<p>
-La página web va tomando forma. Ojalá les enganche tanto como a mí. Éstos han sido días difíciles. A veces pienso que la escritura me salvó la vida. A veces pienso que me la arruinó. ¿Dónde se esconderá la verdad cuando no podemos ver claro? ¿En la mirada de un enemigo? Por estos días aprendí el valor de llevarse bien con los enemigos, porque en los peores momentos son ellos los que te pueden ayudar de formas impensadas.
-</p>
-
-<p>
-Por eso les digo a ellos y solo a ellos:
-
-Gracias por estar ahí.
-
-Nos vemos la próxima.<br><br>
-
-<p class="firma">— Gastón Spratt</p>
-</p>
-  
-</div>
+<a href="alucinaciones.html">Alucinaciones</a>
+<a href="bitacora.html">Bitácora</a>
+<a href="contacto.html">Contacto</a>
 
 </div>
 
-<div class="section">
-
-<p class="terminal-title">
-// REGISTRO_0001
-</p>
-
-<p>
-<h3>05 · JUL · 2026</h3>
-</p>
-
-<div class="terminal">
-
-<p>
-Nivel de alucinación
-</p>
-
-<p class="barra">
-██████████ 100%
-</p>
-
-<br>
-
-<p>
-Hoy inauguro oficialmente este archivo.
-Un espacio para registrar sucesos,
-eventos y avances de Fragmentos del
-Crepúsculo Humano.
-</p>
-
-<p>
-Algunos no creen en mí.
-Algunos otros sí.
-
-Por ambos estoy acá.
-
-Gracias por leer.<br><br>
-
-<p class="firma">— Gastón Spratt</p>
-</p>
-  
-</div>
+</nav>
 
 </div>
 
-<div class="section">
+</header>
 
-<div class="terminal terminal-footer">
+<main>
 
-<div class="datos">
+<main>
 
-AUTOR............... GASTÓN SPRATT<br>
-ARCHIVO............. PERSONAL<br>
-ESTADO DEL SISTEMA.. <span class="online">● ONLINE</span>
+    <section class="hero">
+        <p class="section-level">FRAGMENTO CERO · NIVEL_6</p>
+        <h1>Bitácora</h1>
+        <p class="section-description">
+Registro cronológico del proceso creativo detrás de Fragmento Cero. Un archivo de ideas, decisiones y momentos que dieron forma a las obras y al universo que las contiene.        </p>
+    </section>
 
-</div>
+    <section class="cards-container">
+
+        <article class="card">
+            <h2>REGISTRO_0001</h2>
+
+            <p class="card-date">25 JUL 2026</p>
+
+            <p class="card-description">
+                Escribo.
+            </p>
+
+            <a href="registro-0001.html" class="card-link">
+                Leer registro →
+            </a>
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+
+<div class="container">
+
+<p>
+
+FRAGMENTO CERO · ARCHIVO CENTRAL · GASTÓN SPRATT
+
+</p>
+
+<p class="footer-small">
+
+Última actualización: Julio 2026
+
+</p>
 
 </div>
 
 </footer>
-  
+
+<script>
+
+window.addEventListener("load", () => {
+
+const loader = document.querySelector(".archive-loader");
+
+setTimeout(() => {
+
+loader.classList.add("hidden");
+
+}, 900);
+
+});
+
+</script>
+
 </body>
 
 </html>
