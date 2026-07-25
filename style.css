@@ -1261,3 +1261,25 @@ footer{
     border-radius:10px;
 
 }
+
+.piece-content{
+    max-width:900px;
+    margin:0 auto;
+    padding:50px 60px;
+}
+
+.piece-content p{
+    margin-bottom:1.4rem;
+}
+
+.piece-content .manifesto-title{
+    margin-bottom:24px;
+}
+
+.piece-content .eyebrow{
+    margin-bottom:18px;
+}
+
+.piece-content .metadata{
+    margin-bottom:36px;
+}
