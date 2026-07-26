@@ -1283,3 +1283,11 @@ footer{
 .piece-content .metadata{
     margin-bottom:36px;
 }
+
+.hero-bitacora {
+    padding-bottom: 40px;
+}
+
+.hero-bitacora + .section {
+    padding-top: 20px;
+}
