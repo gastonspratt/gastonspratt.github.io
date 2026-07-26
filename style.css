@@ -1291,3 +1291,12 @@ footer{
 .hero-bitacora + .section {
     padding-top: 20px;
 }
+
+.section-contacto {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section-contacto + .section-contacto {
+    padding-top: 20px;
+}
