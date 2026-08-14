@@ -1315,3 +1315,19 @@ footer{
 .contact-grid {
     margin-top: 35px;
 }
+
+.piece-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.piece-content p {
+    margin-bottom: 1rem;
+}
