@@ -1,82 +1,37 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Qué es el amor? | Gastón Spratt</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos básicos para asegurar que se vea bien en móvil */
-        body { font-family: 'IBM Plex Sans', sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .piece-image { max-width: 100%; height: auto; display: block; margin: 20px auto; }
-        .piece-content { font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; text-align: center; margin-top: 30px; padding: 0 15px; }
-        .piece-content p { margin: 10px 0; }
-        .piece-signature { margin-top: 40px; font-size: 0.9rem; color: #555; }
-        .button { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #333; }
-    </style>
-</head>
-
-<body>
-
-    <header>
+<main>
+    <section class="section">
         <div class="container">
-            <nav>
-                <a href="index.html" class="logo">GASTÓN SPRATT</a>
-                <div class="menu">
-                    <a href="index.html">Inicio</a> | <a href="biografia.html">Biografía</a> | <a href="obras.html">Obras</a> | <a href="fdch.html">FDCH</a> | <a href="alucinaciones.html">Alucinaciones</a> | <a href="bitacora.html">Bitácora</a> | <a href="contacto.html">Contacto</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+            <a href="alucinaciones.html" class="button">← Volver a Alucinaciones</a>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <a href="alucinaciones.html" class="button">← Volver a Alucinaciones</a>
+            <h1 class="piece-title">¿Qué es el amor?</h1>
 
-                <h1 class="piece-title" style="text-align: center;">¿Qué es el amor?</h1>
-
-                <div class="piece-frame">
-                    <img src="imagenes/que-es-el-amor.png" alt="¿Qué es el amor?" class="piece-image">
-                </div>
-
-                <div class="piece-content">
-                    <p>¿Qué es el amor?</p>
-                    <p>¿Qué es el recuerdo?</p>
-                    <br>
-                    <p>Un día le cuento a un amigo</p>
-                    <p>En el banco de una plaza</p>
-                    <br>
-                    <p>El sol quema, un perro estira la correa,</p>
-                    <p>Me gusta una chica.</p>
-                    <br>
-                    <p>Me estoy cepillando los dientes.</p>
-                    <br>
-                    <p>Estoy esperando en la fila del colectivo</p>
-                    <p>Para ir a verla.</p>
-                    <br>
-                    <p>Cuento billetes. No tengo nada</p>
-                    <p>&hellip; Ni un verso nada.</p>
-
-                    <div class="piece-signature">
-                        <p class="piece-date">07072026</p>
-                        <p class="piece-author">Gastón Spratt</p>
-                    </div>
-                </div>
+            <!-- La foto dentro del frame que ya definiste en CSS -->
+            <div class="piece-frame">
+                <img src="imagenes/que-es-el-amor.png" alt="¿Qué es el amor?" class="piece-image">
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <div class="container" style="text-align: center; margin-top: 50px; font-size: 0.8rem;">
-            FRAGMENTO CERO · ALUCINACIONES · GASTÓN SPRATT
+            <!-- El texto abajo, usando la clase que ya tienes en tu CSS -->
+            <div class="piece-content">
+                <p>¿Qué es el amor?</p>
+                <p>¿Qué es el recuerdo?</p>
+                <br>
+                <p>Un día le cuento a un amigo</p>
+                <p>En el banco de una plaza</p>
+                <br>
+                <p>El sol quema, un perro estira la correa,</p>
+                <p>Me gusta una chica.</p>
+                <br>
+                <p>Me estoy cepillando los dientes.</p>
+                <br>
+                <p>Estoy esperando en la fila del colectivo</p>
+                <p>Para ir a verla.</p>
+                <br>
+                <p>Cuento billetes. No tengo nada</p>
+                <p>&hellip; Ni un verso nada.</p>
+                <br>
+                <p>07072026</p>
+                <p>Gastón Spratt</p>
+            </div>
         </div>
-    </footer>
-
-</body>
-</html>
+    </section>
+</main>
