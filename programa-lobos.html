@@ -14,25 +14,30 @@
 
 <link rel="stylesheet" href="style.css">
 <style>
-  /* Fondo con marca de agua del logo del lobo en grande y sutil */
-  body::before {
-    content: "";
+  /* Marca de agua del lobo de fondo centrada y visible */
+  .lobo-watermark {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(650px, 90vw);
-    height: min(650px, 90vw);
+    width: min(600px, 85vw);
+    height: min(600px, 85vw);
     background-image: url('logo_lobos.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    opacity: 0.035;
-    z-index: -1;
+    opacity: 0.12;
     pointer-events: none;
+    z-index: 0;
   }
 
-  /* Centrar y acotar el ancho únicamente del contenido principal (main), manteniendo el header intacto */
+  /* Asegurar que el contenido esté por encima de la marca de agua */
+  header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Centrar y acotar el ancho únicamente del contenido principal (main) */
   main {
     max-width: 780px;
     margin: 0 auto;
@@ -58,6 +63,9 @@
 </head>
 
 <body>
+
+<!-- Marca de agua de fondo -->
+<div class="lobo-watermark"></div>
 
 <div class="archive-loader">
 <p>CONSULTANDO ARCHIVO...</p>
