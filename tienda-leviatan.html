@@ -14,6 +14,29 @@
 
 <link rel="stylesheet" href="style.css">
 <style>
+  /* Marca de agua del lobo de fondo centrada, visible y con la ruta correcta */
+  .lobo-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(650px, 90vw);
+    height: min(650px, 90vw);
+    background-image: url('imagenes/logo_lobos.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Asegurar que el contenido esté por encima de la marca de agua */
+  header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+
   /* Centrar y acotar el ancho únicamente del contenido principal (main) */
   main {
     max-width: 780px;
@@ -40,6 +63,9 @@
 </head>
 
 <body>
+
+<!-- Marca de agua de fondo -->
+<div class="lobo-watermark"></div>
 
 <div class="archive-loader">
 <p>CONSULTANDO ARCHIVO...</p>
@@ -120,8 +146,12 @@ Su vínculo con la escena también lo llevó a participar en la fundación de la
 Hoy esa historia continúa.
 </p>
 
-<p style="margin-top: 15px; color: var(--title); font-weight: 500;">
+<p style="margin-top: 15px;">
 En Tienda Leviatán, tres hermanos mantenemos vivo ese espíritu de curiosidad, descubrimiento y amor por la cultura. Seleccionamos cuidadosamente música, libros y cómics con la misma convicción que impulsó aquellos primeros pasos: acercar a otros apasionados obras capaces de dejar una huella.
+</p>
+
+<p style="margin-top: 15px; color: var(--title); font-weight: 500;">
+Hoy por hoy, llevamos adelante un proyecto de tienda física en General Cabrera, mientras realizamos compras, pedidos y envíos a través de Instagram y de nuestra propia página web.
 </p>
 </div>
 </section>
@@ -150,15 +180,17 @@ En Tienda Leviatán, tres hermanos mantenemos vivo ese espíritu de curiosidad, 
 <section class="section" id="enlace">
 <div class="section-heading">
 <span class="section-number">03</span>
-<h2>SITIO OFICIAL</h2>
+<h2>SITIO OFICIAL Y CONTACTO</h2>
 </div>
 
 <div class="panel" style="text-align: center; padding: 40px 20px;">
-<p class="manifesto-title" style="margin-bottom: 20px;">// ACCESO DIRECTO AL CATÁLOGO</p>
+<p class="manifesto-title" style="margin-bottom: 20px;">// CANALES DE ATENCIÓN Y COMPRA</p>
 <p style="margin-bottom: 30px;">
-Explorá las novedades, el stock disponible y las piezas de colección directamente en nuestra plataforma de e-commerce.
+Explorá las novedades, hacé tus consultas y gestioná tus pedidos directamente en nuestra plataforma o a través de nuestras redes.
 </p>
-<a href="https://tiendaleviatan.com/" target="_blank" class="button" style="display: inline-block; padding: 15px 35px; background: var(--accent); color: var(--bg); font-family: 'IBM Plex Mono', monospace; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 4px; text-decoration: none;">Visitar tiendaleviatan.com →</a>
+<div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+<a href="https://tiendaleviatan.com/" target="_blank" class="button" style="display: inline-block; padding: 15px 30px; background: var(--accent); color: var(--bg); font-family: 'IBM Plex Mono', monospace; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 4px; text-decoration: none;">Visitar tiendaleviatan.com →</a>
+</div>
 </div>
 </section>
 
