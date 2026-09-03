@@ -3,521 +3,325 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Programa Lobos | Manifiesto y Contacto</title>
+<title>Programa Lobos | Gastón Spratt</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 <style>
-  :root{
-    --bg: #000;
-    --panel: #0b0b0b;
-    --title: #f4f0ea;
-    --text: #d5d1ca;
-    --muted: #8c8882;
-    --accent: #b87a3a;
-    --border: rgba(184,122,58,.35);
-    --radius: 18px;
-  }
-  
-  body{
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 1.8;
-  }
-
-  /* Contenedor central compacto */
-  .narrow-container{
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  header{
-    padding: 4rem 1.5rem 2rem;
-    text-align: center;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-  }
-  .back-link{
-    display: inline-block;
-    margin-bottom: 2rem;
-    color: var(--muted);
-    text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    transition: color 0.2s;
-  }
-  .back-link:hover{
-    color: var(--accent);
-  }
-  .header-logo{
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    margin: 0 auto 1.5rem auto;
-    display: block;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    background: var(--panel);
-    padding: 6px;
-  }
-  .header-eyebrow{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    margin-bottom: 1rem;
-    display: block;
-  }
-  h1{
-    font-family: 'Exo 2', sans-serif;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    color: var(--title);
-    text-align: center;
-    letter-spacing: -0.02em;
-  }
-  .header-subtitle{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--accent);
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  /* SECCIÓN DE ENTRADA / FORMULARIO */
-  .hero-crisis-section{
-    padding: 3rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .crisis-message{
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .crisis-message h2{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.5rem;
-    color: var(--title);
-    margin-bottom: 1rem;
-    line-height: 1.4;
-  }
-  .crisis-message p{
-    color: var(--text);
-    font-size: 1rem;
-    line-height: 1.7;
-    text-align: center;
-  }
-
-  .crisis-form{
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2.5rem;
-    text-align: left;
-  }
-  .form-group{
-    margin-bottom: 1.3rem;
-  }
-  .form-group label{
-    display: block;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 0.4rem;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select{
-    width: 100%;
-    padding: 0.8rem;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--title);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.95rem;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus{
-    outline: none;
-    border-color: var(--accent);
-  }
-  .form-group textarea{
-    min-height: 90px;
-    resize: vertical;
-  }
-  .form-note{
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-top: 0.4rem;
-  }
-  .submit-btn{
-    width: 100%;
-    padding: 1rem;
-    background: transparent;
-    border: 1px solid var(--accent);
-    border-radius: 999px;
-    color: var(--accent);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    margin-top: 1rem;
-  }
-  .submit-btn:hover{
-    background: var(--accent);
-    color: #000;
-  }
-
-  /* SECCIONES DEL MANIFIESTO */
-  .section{
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .section-title{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.6rem;
-    color: var(--title);
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  .section-number{
-    display: block;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    margin-bottom: 0.4rem;
-    text-align: center;
-  }
-  
-  .section p{
-    margin-bottom: 1.3rem;
-    color: var(--text);
-    text-align: justify;
-  }
-
-  .pull-quote{
-    margin: 2.5rem 0;
-    padding: 1.8rem;
-    border-left: 2px solid var(--accent);
-    background: var(--panel);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    text-align: left;
-  }
-  .pull-quote p{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--title);
-    margin: 0;
-    text-align: left;
-  }
-
-  .pillars{
-    margin: 2.5rem 0;
-  }
-  .pillar{
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .pillar:last-child{
-    border-bottom: none;
-  }
-  .pillar h3{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.15rem;
-    color: var(--title);
-    margin-bottom: 0.5rem;
-  }
-  .pillar .latin{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.3rem;
-  }
-  .pillar p{
-    margin: 0;
-    text-align: left;
-  }
-
-  .we-are-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin: 2.5rem 0;
-  }
-  .we-are-column h4{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: 1rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-    color: var(--accent);
-  }
-  .we-are-column.no-somos h4{ color: var(--muted); }
-  .we-are-column ul{
-    list-style: none;
-    padding: 0;
-  }
-  .we-are-column li{
-    margin-bottom: 0.8rem;
-    padding-left: 1.2rem;
-    position: relative;
-    color: var(--text);
-    font-size: 0.95rem;
-    text-align: left;
-  }
-  .we-are-column li::before{
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-  }
-
-  .story-box{
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2rem;
-    margin: 2.5rem 0;
-  }
-  .story-box h4{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    margin-bottom: 0.8rem;
-    text-align: center;
-  }
-  .story-box p{
-    font-style: italic;
-    text-align: left;
-    margin: 0;
-    color: var(--title);
-  }
-
-  .deep-why{
-    margin: 2.5rem 0;
-    text-align: center;
-    padding: 1.2rem;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  .deep-why p{
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 0;
-    text-align: center;
-  }
-
-  .final-quote{
-    margin: 2.5rem 0 0 0;
-    padding: 1.8rem;
-    border-left: 3px solid var(--accent);
-    background: var(--panel);
-    border-radius: 0 var(--radius) var(--radius) 0;
-  }
-  .final-quote p{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.15rem;
-    font-style: italic;
-    color: var(--title);
-    margin: 0;
-    text-align: center;
-  }
-
-  footer{
-    padding: 3rem 1.5rem;
-    text-align: center;
-    background: var(--bg);
-    border-top: 1px solid var(--border);
-  }
-  footer p{
-    color: var(--muted);
-    font-size: 0.85rem;
-    font-family: 'IBM Plex Mono', monospace;
-  }
-  footer .tagline{
-    font-family: 'Exo 2', sans-serif;
-    font-style: italic;
-    color: var(--accent);
-    margin-top: 0.4rem;
+  /* Parche de seguridad para móviles: evita líneas cruzadas y superposiciones */
+  @media (max-width: 768px) {
+    hr, .archive-divider, section {
+      border: none;
+    }
+    .hero {
+      padding-top: 40px !important;
+    }
+    body {
+      overflow-x: hidden;
+    }
   }
 </style>
 </head>
+
 <body>
 
+<div class="archive-loader">
+<p>CONSULTANDO ARCHIVO...</p>
+<p>PROGRAMA LOBOS</p>
+<p>FILOSOFÍA Y ACCIÓN</p>
+<p>ACCESO CONCEDIDO</p>
+</div>
+
 <header>
-  <div class="narrow-container">
-    <a href="index.html" class="back-link">← Volver al Inicio</a>
-    <img src="imagenes/logo_lobos.jpg" alt="Logo Programa Lobos" class="header-logo">
-    <span class="header-eyebrow">Red de apoyo para hombres</span>
-    <h1>Programa Lobos</h1>
-    <p class="header-subtitle">"Nadie está solo en la manada"</p>
-  </div>
+<div class="container">
+<nav>
+<a href="index.html" class="logo">GASTÓN SPRATT</a>
+<div class="menu">
+<a href="index.html">Inicio</a>
+<a href="biografia.html">Biografía</a>
+<a href="obras.html">Obras</a>
+<a href="fdch.html">FdCH</a>
+<a href="alucinaciones.html">Alucinaciones</a>
+<a href="bitacora.html">Bitácora</a>
+<a href="parkinson.html">Parkinson</a>
+<a href="programa-lobos.html" style="color: var(--accent);">Programa Lobos</a>
+<a href="tienda-leviatan.html">Tienda Leviatán</a>
+<a href="contacto.html">Contacto</a>
+</div>
+</nav>
+</div>
 </header>
 
-<main class="narrow-container">
+<main>
 
-  <!-- INTRODUCCIÓN CERCANA Y FORMULARIO DE INICIO -->
-  <section class="hero-crisis-section">
-    <div class="crisis-message">
-      <h2>¿Estás atravesando una separación, una crisis o sintiendo el peso del aislamiento?</h2>
-      <p>No tenés que cargar con todo en silencio ni resolverlo a solas. Acá vas a encontrar a otro hombre que ya pasó por el mismo abismo y está dispuesto a escucharte sin juzgarte, sin burocracia y sin estigmas.</p>
-    </div>
+<section class="hero">
+<div class="container" style="text-align: center;">
+<p class="eyebrow">INICIATIVA PERSONAL · RED DE APOYO</p>
+<h1 style="font-family: 'Exo 2', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); color: var(--title); margin-bottom: 20px;">
+PROGRAMA LOBOS
+</h1>
+<p class="metadata" style="font-style: italic; color: var(--accent); font-size: 1.2rem; margin-bottom: 30px;">
+“Nadie está solo en la manada”
+</p>
+<p class="hero-description" style="margin: 0 auto; max-width: 750px; font-size: 1.1rem; line-height: 1.8;">
+¿Estás atravesando una separación, una crisis o el peso del aislamiento?<br>
+<strong>No tenés que cargar con todo en silencio ni resolverlo a solas.</strong>
+</p>
+</div>
+</section>
 
-    <form class="crisis-form" action="#" method="POST">
-      <div class="form-group">
-        <label for="nombre">Nombre o seudónimo</label>
-        <input type="text" id="nombre" name="nombre" required placeholder="Cómo querés que te llamemos">
-      </div>
-      
-      <div class="form-group">
-        <label for="contacto">Forma de contacto (Teléfono / Email)</label>
-        <input type="text" id="contacto" name="contacto" required placeholder="Para poder escribirte o llamarte">
-      </div>
-      
-      <div class="form-group">
-        <label for="situacion">¿Qué situación estás transitando?</label>
-        <textarea id="situacion" name="situacion" placeholder="Contanos brevemente qué te pasa (separación, crisis personal, aislamiento...)"></textarea>
-        <p class="form-note">Estrictamente confidencial. Solo un par que te escucha.</p>
-      </div>
-      
-      <button type="submit" class="submit-btn">Solicitar contención de un par</button>
-    </form>
-  </section>
+<section class="section">
+<div class="container">
+<div class="panel">
+<p class="manifesto-title">// PRINCIPIO RECTOR</p>
+<p style="font-size: 1.05rem; margin-bottom: 20px;">
+Programa Lobos es una iniciativa de acompañamiento entre pares. Un espacio donde un hombre que está atravesando una crisis puede hablar con otro hombre que conoce, desde la experiencia, lo que significa estar perdido, solo o al límite.
+</p>
+<p style="font-size: 1.05rem; color: var(--title); margin-bottom: 20px;">
+<em>Sin juzgarte. Sin etiquetarte. Sin convertir tu dolor en un expediente.</em>
+</p>
+<p style="font-size: 1.05rem; color: var(--accent);">
+Acá hay alguien dispuesto a escucharte.
+</p>
+</div>
+</div>
+</section>
 
-  <!-- SECCIÓN I: FILOSOFÍA Y PILARES -->
-  <section class="section">
-    <span class="section-number">I</span>
-    <h2 class="section-title">Filosofía y Pilares</h2>
-    
-    <p>El Programa Lobos se sustenta en la filosofía estoica, no como doctrina académica, sino como herramienta práctica para atravesar la adversidad. Los estoicos enseñaron que no controlamos lo que nos sucede, pero sí controlamos cómo respondemos. Que la virtud es el único bien verdadero. Que la comunidad — la manada — es nuestra salvación contra el aislamiento.</p>
-    
-    <div class="pillars">
-      <div class="pillar">
-        <div class="latin">Dichotomía de Control</div>
-        <h3>Entre lo que depende de nosotros y lo que no</h3>
-        <p>No elegimos la separación, la enfermedad, la pérdida del trabajo. Eso no depende de nosotros. Pero depende de nosotros cómo respondemos, si mantenemos la dignidad, si buscamos ayuda, si elegimos la virtud sobre la desesperación. Enseñamos a distinguir: ¿Esto lo controlo yo, o solo mi reacción ante ello?</p>
-      </div>
-      
-      <div class="pillar">
-        <div class="latin">Amor Fati</div>
-        <h3>Amar lo que es</h3>
-        <p>No significa resignarse, significa aceptar la realidad para poder transformarla. Un hombre que niega su situación — "esto no puede estar pasándome", "esto es injusto" — se paraliza. Un hombre que acepta lo que es, puede preguntarse: "¿Y ahora qué hago?" El amor fati es combustible, no rendición.</p>
-      </div>
-      
-      <div class="pillar">
-        <div class="latin">Virtus</div>
-        <h3>La virtud como único bien</h3>
-        <p>En la crisis, es fácil "mandarse cagadas": violencia, autodestrucción, abandono de responsabilidades. La virtud estoica — prudencia, justicia, fortaleza, templanza — es nuestro norte. No ser "buenito", ser íntegro. Hacer lo correcto incluso cuando nadie mira, especialmente cuando estamos heridos.</p>
-      </div>
-      
-      <div class="pillar">
-        <div class="latin">Cosmopolitismo</div>
-        <h3>Somos ciudadanos del mundo, y de la manada</h3>
-        <p>Nadie está solo en la manada. El estoicismo enseña que somos parte de un todo, que el aislamiento es ilusorio, que debemos cuidarnos unos a otros. El Programa Lobos es esa comunidad: hombres que se reconocen, se sostienen, se devuelven la dignidad.</p>
-      </div>
-    </div>
-  </section>
+<section class="section">
+<div class="container">
+<div class="section-heading">
+<span class="section-number">01</span>
+<h2>FILOSOFÍA Y PILARES</h2>
+</div>
 
-  <!-- SECCIÓN II: ORIGEN -->
-  <section class="section">
-    <span class="section-number">II</span>
-    <h2 class="section-title">Nuestra Historia y Origen</h2>
-    
-    <p>Este programa nace de una experiencia personal. Un hombre en General Cabrera, después de diez años de relación, con dos hijas pequeñas y diagnosticado con Parkinson, atravesó una separación que lo dejó casi al límite. Sin familia, sin casa, sin los afectos cotidianos que daban sentido a su vida. Fue a la comisaría tres veces buscando ayuda. Buscó contención profesional, pero las puertas se le cerraban: turnos lejanos, burocracia, diagnósticos que no servían, profesionales que no respondían.</p>
-    
-    <p>Hasta que un día, la ayuda llegó de donde menos lo esperaba: un empleado de supermercado que, tan solo por amabilidad, le preguntó cómo estaba mientras acomodaba las góndolas. Él respondió: "Me estoy separando y la estoy pasando muy mal". El empleado se levantó del piso y dijo: "Me pasó lo mismo hace unos meses, igual, la pasé realmente mal, pero ahora estoy mejor. Para mí no es joda, un amigo se quitó la vida. Si necesitás hablar con alguien, anotá mi teléfono".</p>
-    
-    <div class="story-box">
-      <h4>Testimonio del Fundador</h4>
-      <p>"No estoy acá para contar quién tuvo la culpa. Eso no importa. Lo que importa es que estuve al borde, y me salvó un par. No un profesional, no un familiar. Un tipo que me dijo: 'Yo también'. Eso es lo que queremos replicar. Que ningún hombre llegue a donde llegué yo sin tener a quién llamar."</p>
-    </div>
-    
-    <div class="pull-quote">
-      <p>Este programa no busca juzgar a nadie ni buscar culpables. Tampoco se queda en un testimonio que no aporte soluciones: busca proponer mejoras desde la experiencia que implica no solo haberlo vivido, sino llevar las cicatrices de algo que en muchos casos quizás nunca termine de cerrar.</p>
-    </div>
-    
-    <div class="deep-why">
-      <p>Los porqués profundos son preguntas que muchas veces ni los psicólogos se animan a hacer</p>
-    </div>
-    
-    <p>De esa experiencia nace el Programa Lobos. No como venganza. No como respuesta a nadie. Como prevención. Como red. Como la certeza de que, en el área de prevención, es más fácil que un hombre se acerque a otro hombre.</p>
-    
-    <div class="final-quote">
-      <p>Hay respuestas que no están en ningún manual: se encuentran solo en la identificación de quien ha pasado por lo mismo y está ahí, frente a vos, para contartelo.</p>
-    </div>
-  </section>
+<div class="panel" style="margin-bottom: 30px;">
+<p class="manifesto-title">// ESTOICISMO PRÁCTICO</p>
+<p>
+Programa Lobos toma elementos de la filosofía estoica no como doctrina académica ni como una obligación de “ser fuerte”, sino como herramientas prácticas para atravesar la adversidad.
+</p>
+<p style="margin-top: 15px;">
+Los estoicos entendieron algo fundamental: no siempre podemos elegir lo que nos sucede, pero podemos trabajar sobre la manera en que respondemos. Para nosotros, eso también significa algo más sencillo:
+</p>
+<p style="margin-top: 15px; color: var(--title); font-weight: 500;">
+<em>Un hombre que está sufriendo no necesita que le digan que aguante. Necesita no estar solo.</em> Desde ahí construimos nuestra manada.
+</p>
+</div>
 
-  <!-- SECCIÓN III: LO QUE SOMOS / LO QUE NO SOMOS -->
-  <section class="section" style="border-bottom: none;">
-    <span class="section-number">III</span>
-    <h2 class="section-title">Lo Que Somos / Lo Que No Somos</h2>
-    
-    <div class="we-are-grid">
-      <div class="we-are-column somos">
-        <h4>Lo Que Somos</h4>
-        <ul>
-          <li>Una iniciativa cívica: actuamos en el espacio público para el bien común y la prevención</li>
-          <li>Un espacio de apoyo entre hombres, reconociendo las particularidades de la crisis masculina</li>
-          <li>Una red de prevención: intervenimos antes de la crisis aguda</li>
-          <li>Un programa guiado por principios de resiliencia y filosofía práctica</li>
-          <li>Un espacio de escucha sin diagnósticos, sin etiquetas, sin burocracia</li>
-          <li>Un puente hacia servicios profesionales cuando realmente se necesitan</li>
-        </ul>
-      </div>
-      <div class="we-are-column no-somos" style="margin-top: 2rem;">
-        <h4>Lo Que No Somos</h4>
-        <ul>
-          <li>Una organización sectaria ni partidaria</li>
-          <li>Un espacio religioso o confesional</li>
-          <li>Un movimiento hostil ni una reacción en contra de nadie</li>
-          <li>Un refugio para justificar violencias o evadir responsabilidades</li>
-          <li>Un aguantadero de resentimiento o queja estéril</li>
-          <li>Un servicio de urgencias médicas o psiquiátricas</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="pull-quote">
-      <p>"Atendemos una problemática urgente: el aislamiento masculino y la prevención de desenlaces trágicos. Acompañar a un hombre en su dolor no significa ir en contra de nadie."</p>
-    </div>
-  </section>
+<div class="grid grid-2">
+<div class="card">
+<h3>Dicotomía de Control</h3>
+<p>Distinguir lo que depende de nosotros de lo que no. No elegimos una separación, una enfermedad o una pérdida. Pero sí podemos elegir nuestra respuesta, pedir ayuda, evitar decisiones irreversibles y sostener la dignidad.</p>
+</div>
+
+<div class="card">
+<h3>Amor Fati</h3>
+<p>Aceptar la realidad para poder transformarla. Significa dejar de gastar todas nuestras fuerzas negando lo que ya ocurrió («Esto no puede estar pasándome») para empezar a preguntar: <em>«Esto es lo que hay. ¿Y ahora qué hago?»</em></p>
+</div>
+
+<div class="card">
+<h3>Virtus</h3>
+<p>La integridad como norte. En una crisis es fácil actuar desde la rabia o lastimar. La virtud propone prudencia, justicia, fortaleza y templanza. Hacer lo correcto incluso cuando estamos heridos, y especialmente cuando nadie mira.</p>
+</div>
+
+<div class="card">
+<h3>Cosmopolitismo</h3>
+<p>Somos parte de algo más grande. Nadie está solo en la manada. Un par no viene a salvarte; viene a sentarse al lado tuyo mientras atravesás el incendio y a ayudarte a buscar asistencia especializada si hace falta.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-heading">
+<span class="section-number">02</span>
+<h2>NUESTRA HISTORIA Y ORIGEN</h2>
+</div>
+
+<div class="panel">
+<p class="manifesto-title">// EL QUIEBRE Y EL HALLAZGO</p>
+<p>
+Programa Lobos nace de una experiencia personal. Un hombre de General Cabrera, después de diez años de relación, con dos hijas pequeñas y atravesando además una enfermedad degenerativa, enfrentó una separación que lo dejó prácticamente al límite.
+</p>
+<p style="margin-top: 15px;">
+Perdió de golpe buena parte de la estructura cotidiana que sostenía su vida. Buscó ayuda. Fue a una comisaría. Intentó acceder a contención profesional. Se encontró con puertas difíciles de abrir, turnos lejanos, burocracia y respuestas que muchas veces llegaban demasiado tarde.
+</p>
+<p style="margin-top: 15px;">
+Hasta que la ayuda apareció en un lugar completamente inesperado: un empleado de supermercado le preguntó cómo estaba. Él respondió: <em>“Me estoy separando y la estoy pasando muy mal”</em>. El empleado dejó por un momento lo que estaba haciendo, contestó que él también había pasado por algo parecido y le dijo algo que quedó grabado: <em>“Si necesitás hablar con alguien, anotá mi teléfono”</em>.
+</p>
+<p style="margin-top: 15px;">
+No era psicólogo, médico ni funcionario. Era un hombre que había pasado por lo mismo y reconoció el dolor en otro. Ese gesto rompió el aislamiento.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-heading">
+<span class="section-number">03</span>
+<h2>TESTIMONIO DEL FUNDADOR</h2>
+</div>
+
+<div class="panel">
+<blockquote style="font-size: 1.1rem; font-style: italic; color: var(--title); line-height: 1.7; border-left: 3px solid var(--accent); padding-left: 20px; margin: 20px 0;">
+«No estoy acá para contar quién tuvo la culpa. Eso no importa.<br><br>
+Lo que importa es que estuve al borde y alguien me escuchó.<br>
+No me salvó un manual. Me salvó un par. Un tipo que pudo decirme: ‘Yo también pasé por esto’.<br><br>
+Eso es lo que queremos replicar. Que ningún hombre llegue a donde llegué yo sin tener a quién llamar.»
+</blockquote>
+<p style="margin-top: 20px;">
+Programa Lobos no nace para buscar culpables, ni como venganza, ni contra las mujeres, las familias o las instituciones. Nace de una pregunta mucho más sencilla: <strong>¿Qué podemos hacer antes de que un hombre llegue al límite?</strong>
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-heading">
+<span class="section-number">04</span>
+<h2>POR QUÉ UN PAR</h2>
+</div>
+
+<div class="panel">
+<p class="manifesto-title">// EXPERIENCIA COMPARTIDA</p>
+<p>
+Hay experiencias que solamente pueden ser comprendidas plenamente por alguien que las atravesó: una separación, la pérdida del contacto cotidiano con los hijos, la soledad, la vergüenza, el miedo económico, la sensación de haber perdido la vida que uno conocía.
+</p>
+<p style="margin-top: 15px;">
+Eso no significa que un par reemplace a un psicólogo, un médico, un abogado o un servicio de emergencia. Significa otra cosa: <strong>el acompañamiento entre pares puede ser la puerta que permita llegar hasta ellos</strong>.
+</p>
+<div class="terminal" style="margin-top: 25px; overflow-x: auto;">
+EL PAR ESCUCHA Y ACOMPAÑA.<br>
+Ayuda a ordenar · Comparte experiencia cuando corresponde · Detecta señales de alarma.<br>
+No diagnostica · No receta · No promete salvar a nadie · No reemplaza emergencias.
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-heading">
+<span class="section-number">05</span>
+<h2>ALCANCE Y LÍMITES</h2>
+</div>
+
+<div class="grid grid-2">
+<div class="panel">
+<p class="manifesto-title" style="color: #62a392;">// LO QUE SOMOS</p>
+<ul style="list-style: none; padding: 0; font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; line-height: 1.8;">
+<li>✓ Iniciativa cívica de prevención.</li>
+<li>✓ Red de apoyo entre hombres.</li>
+<li>✓ Espacio de escucha y experiencia compartida.</li>
+<li>✓ Herramienta contra el aislamiento.</li>
+<li>✓ Un puente hacia servicios profesionales.</li>
+</ul>
+</div>
+
+<div class="panel">
+<p class="manifesto-title" style="color: #b85757;">// LO QUE NO SOMOS</p>
+<ul style="list-style: none; padding: 0; font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; line-height: 1.8;">
+<li>✕ Espacio religioso, sectario o partidario.</li>
+<li>✕ Movimiento contra ningún grupo.</li>
+<li>✕ Refugio para justificar violencia.</li>
+<li>✕ Servicio médico, psicológico o jurídico.</li>
+<li>✕ Servicio de emergencias.</li>
+</ul>
+</div>
+</div>
+
+<div class="panel" style="margin-top: 30px;">
+<p>
+<em>Acompañar a un hombre en su dolor no significa justificar sus actos. Podemos comprender el sufrimiento de una persona y, al mismo tiempo, exigirle responsabilidad por lo que hace con ese sufrimiento.</em>
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-heading">
+<span class="section-number">06</span>
+<h2>CRISIS AGUDA Y SEGURIDAD</h2>
+</div>
+
+<div class="panel" style="border-color: rgba(184, 87, 87, 0.5);">
+<p class="manifesto-title" style="color: #b85757;">// PROTOCOLO DE EMERGENCIA</p>
+<p>
+Hay situaciones que requieren intervención profesional inmediata. Si una persona manifiesta intención de suicidarse, presenta un riesgo grave para sí misma o para otra, atraviesa una crisis psiquiátrica severa o vive una situación de violencia activa, <strong>el acompañamiento entre pares no alcanza</strong>.
+</p>
+<p style="margin-top: 15px;">
+En esos casos, el objetivo del par es no dejar sola a la persona y ayudarla a acceder inmediatamente a los servicios de emergencia. El par no juega a ser médico ni promete secreto absoluto frente a un riesgo inminente. <strong>La vida está primero.</strong>
+</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="contacto">
+<div class="container">
+<div class="section-heading">
+<span class="section-number">07</span>
+<h2>SOLICITAR ACOMPAÑAMIENTO</h2>
+</div>
+
+<div class="panel">
+<p class="manifesto-title">// CANAL DE ENLACE</p>
+<p>Completá el formulario. Un par se pondrá en contacto con vos. Sin costo, sin compromiso, con absoluta confidencialidad.</p>
+
+<form class="contact-form" action="#" method="POST" style="margin-top: 30px;">
+<table class="record-table" style="margin-bottom: 25px; width: 100%;">
+<tr>
+<td style="display: block; width: 100%; border: none; padding-bottom: 5px;">Nombre / Seudónimo</td>
+<td style="display: block; width: 100%; border: none; padding-bottom: 15px;"><input type="text" name="nombre" required style="width:100%; padding:12px; background:#000; border:1px solid var(--border); color:var(--title); border-radius:8px; font-family:'IBM Plex Mono',monospace;"></td>
+</tr>
+<tr>
+<td style="display: block; width: 100%; border: none; padding-bottom: 5px;">Forma de contacto (Tel / Email)</td>
+<td style="display: block; width: 100%; border: none; padding-bottom: 15px;"><input type="text" name="contacto" required style="width:100%; padding:12px; background:#000; border:1px solid var(--border); color:var(--title); border-radius:8px; font-family:'IBM Plex Mono',monospace;"></td>
+</tr>
+<tr>
+<td style="display: block; width: 100%; border: none; padding-bottom: 5px;">¿Qué situación estás transitando?</td>
+<td style="display: block; width: 100%; border: none;"><textarea name="situacion" rows="4" placeholder="Separación, crisis, aislamiento..." style="width:100%; padding:12px; background:#000; border:1px solid var(--border); color:var(--title); border-radius:8px; font-family:'IBM Plex Sans',sans-serif;"></textarea></td>
+</tr>
+</table>
+
+<p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 25px; font-family: 'IBM Plex Mono', monospace;">
+* La información será tratada con máxima confidencialidad. En situaciones de riesgo grave o inminente, puede ser necesario recurrir a servicios de emergencia o solicitar ayuda profesional.
+</p>
+
+<button type="submit" class="button" style="width:100%; text-align:center; cursor:pointer; padding:18px;">Solicitar acompañamiento de un par</button>
+</form>
+</div>
+
+</div>
+</section>
 
 </main>
 
 <footer>
-  <div class="narrow-container">
-    <p>Manifiesto del Programa Lobos — Iniciativa Personal</p>
-    <p class="tagline">Nadie está solo en la manada.</p>
-  </div>
+<div class="container">
+<p>FRAGMENTO_CERO · PROGRAMA LOBOS · GASTÓN SPRATT</p>
+<p class="footer-small" style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--muted);">
+Iniciativa Personal · Red de Apoyo
+</p>
+</div>
 </footer>
+
+<script>
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".archive-loader");
+  setTimeout(() => { loader.classList.add("hidden"); }, 900);
+});
+</script>
 
 </body>
 </html>
-
-```
