@@ -8,19 +8,50 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Ajuste crítico para el manifiesto y la foto para que no se desborde */
+  .manifiesto {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .manifiesto-texto {
+    flex: 1;
+    min-width: 280px;
+  }
+  .manifiesto-foto {
+    flex: 0 0 260px;
+    max-width: 100%;
+  }
+  .manifiesto-foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    filter: grayscale(20%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .firma {
+    margin-top: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    color: #B88A57;
+  }
+</style>
 </head>
 
-<div class="archive-loader">
+<body>
 
+<div class="archive-loader">
 <p>> INICIALIZANDO ARCHIVO...</p>
 <p>> IDENTIDAD: GASTÓN SPRATT</p>
 <p>> SECCIÓN: INICIO</p>
 <p>> NIVEL_1</p>
 <p>> ACCESO CONCEDIDO</p>
-
 </div>
-
-<body>
 
 <div class="menu">
 <a href="index.html" class="activo">INICIO</a>
@@ -71,7 +102,7 @@
 
 </div>
 
-<!-- SECCIÓN NUEVA: PARKINSON (Orden alfabético) -->
+<!-- SECCIÓN: PARKINSON -->
 <div class="section" id="parkinson">
 
 <p class="terminal-title">
@@ -84,7 +115,7 @@
 
 </div>
 
-<!-- SECCIÓN NUEVA: PROGRAMA LOBOS (Orden alfabético) -->
+<!-- SECCIÓN: PROGRAMA LOBOS -->
 <div class="section" id="programa-lobos">
 
 <p class="terminal-title">
@@ -99,7 +130,7 @@
 
 </div>
 
-<!-- SECCIÓN NUEVA: TIENDA LEVIATÁN (Orden alfabético) -->
+<!-- SECCIÓN: TIENDA LEVIATÁN -->
 <div class="section" id="tienda-leviatan">
 
 <p class="terminal-title">
@@ -136,6 +167,15 @@ ESTADO DEL SISTEMA.. <span class="online">● ONLINE</span>
 </div>
 </div>
 </div>
+
+<script>
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".archive-loader");
+  if (loader) {
+    setTimeout(() => { loader.style.display = 'none'; }, 600);
+  }
+});
+</script>
 
 </body>
 </html>
