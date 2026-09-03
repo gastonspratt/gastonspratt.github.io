@@ -1,332 +1,389 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gastón Spratt | Autor</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&family=Fraunces:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0D1218;
+    --bg-alt: #141B24;
+    --card: #1A2330;
+    --ink: #E8E4DC;
+    --ink-dim: #8A95A3;
+    --line: #2A3542;
+    --accent: #4A9B8C;
+    --accent-warm: #C9A86C;
+  }
+  *{ box-sizing: border-box; margin: 0; padding: 0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(13, 18, 24, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    z-index: 1000;
+    padding: 1rem 2rem;
+  }
+  .nav-content{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-logo{
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--accent-warm);
+    text-decoration: none;
+  }
+  .nav-links{
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a{
+    color: var(--ink-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover{ color: var(--accent); }
+  @media (max-width: 700px){ .nav-links{ display: none; } }
+  
+  .hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-logo{
+    width: 180px;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+  }
+  .hero-eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .hero h1{
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .hero-tagline{
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--accent-warm);
+    margin-bottom: 1.5rem;
+  }
+  .hero p{
+    color: var(--ink-dim);
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 auto;
+  }
+  section{
+    padding: 5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  section h2{
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+  section h3{
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin: 2rem 0 1rem;
+  }
+  section p{
+    color: var(--ink-dim);
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+  ul{
+    margin-left: 1.5rem;
+    color: var(--ink-dim);
+  }
+  ul li{
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  .quote-block{
+    background: var(--bg-alt);
+    border-left: 3px solid #8B4A5A;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+  }
+  .quote-block p{
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    margin: 0;
+  }
+  .quote-block cite{
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--ink-dim);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  
+  .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    margin: 2rem 0;
+  }
+  .card{
+    background: var(--card);
+    padding: 1.5rem;
+  }
+  .card h4{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+  .card p{
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 600px){ .cards{ grid-template-columns: 1fr; } }
+  
+  .process-steps{ margin: 2rem 0; }
+  .step{
+    display: flex;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .step:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    width: 2px;
+    height: calc(100% + 1rem);
+    background: var(--line);
+  }
+  .step-number{
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family: 'IBM Plex Mono', monospace;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+  .step-content{
+    margin-left: 1rem;
+    padding-top: 0.3rem;
+  }
+  .step-content h4{
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+  .step-content p{
+    margin: 0;
+    font-size: 0.95rem;
+  }
 
-<title>Gastón Spratt | Fragmento Cero</title>
+  .comparison{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    margin: 2rem 0;
+  }
+  .comparison-box{
+    background: var(--card);
+    padding: 1.5rem;
+  }
+  .comparison-box h4{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+  }
+  .comparison-box.solo h4{ color: #8B4A5A; }
+  .comparison-box.con-apoyo h4{ color: var(--accent); }
+  .comparison-box p{
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 600px){ .comparison{ grid-template-columns: 1fr; } }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+  footer{
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--line);
+  }
+  footer p{
+    color: var(--ink-dim);
+    font-size: 0.85rem;
+  }
+  footer .tagline{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--accent-warm);
+    margin-top: 0.5rem;
+  }
+</style>
 </head>
-
 <body>
 
-<div class="archive-loader">
-
-<p>> INICIALIZANDO FRAGMENTO CERO...</p>
-<p>> IDENTIDAD: GASTÓN SPRATT</p>
-<p>> MEMORIA · IDENTIDAD · PERSISTENCIA</p>
-<p>> NIVEL_1</p>
-<p>> ACCESO CONCEDIDO</p>
-
-</div>
-
-<header>
-
-<div class="container">
-
 <nav>
-
-<div class="logo">
-GASTÓN SPRATT
-</div>
-
-
-<div class="menu">
-
-<a href="index.html">Inicio</a>
-<a href="biografia.html">Biografía</a>
-<a href="obras.html">Obras</a>
-<a href="fdch.html">FdCH</a>
-<a href="alucinaciones.html">Alucinaciones</a>
-<a href="bitacora.html">Bitácora</a>
-<a href="contacto.html">Contacto</a>
-
-</div>
-
-
+  <div class="nav-content">
+    <a href="#" class="nav-logo">Gastón Spratt</a>
+    <div class="nav-links">
+      <a href="#tienda-leviatan">Tienda Leviatán</a>
+      <a href="#parkinson">Parkinson</a>
+      <a href="#programa-lobos">Programa: Lobos</a>
+    </div>
+  </div>
 </nav>
 
-</div>
-
-</header>
-
-
-
-<main>
-
-
 <section class="hero">
-
-<div class="container hero-layout">
-
-
-<div class="hero-text">
-
-
-<p class="eyebrow">
-FRAGMENTO_CERO · NIVEL_1
-</p>
-
-
-<h1>
-GASTÓN<br>
-SPRATT
-</h1>
-
-
-<p class="metadata">
-ESCRITOR · PADRE · HACEDOR DE MUNDOS
-</p>
-
-
-<p class="metadata">
-MEMORIA · IDENTIDAD · PERSISTENCIA
-</p>
-
-
-<div class="manifesto">
-
-
-<p class="manifesto-title">
-// MANIFIESTO
-</p>
-
-
-<p>
-"La familia es una ilusión.
-</p>
-
-<p>
-La memoria es ficción.
-</p>
-
-<p>
-Y el amor es una alucinación algorítmica."
-</p>
-
-
-<span>
-— Gastón Spratt
-</span>
-
-
-</div>
-
-
-</div>
-
-
-<div class="hero-image">
-
-<img src="imagenes/gaston-spratt.png">
-
-</div>
-
-
-</div>
-
+  <span class="hero-eyebrow">Bitácora y Universo</span>
+  <h1>Fragmento Cero</h1>
+  <p class="hero-tagline">La escritura como trinchera.</p>
+  <p>Desde el interior de La Eleonora hasta las calles de General Cabrera. Aquí conviven las historias que rozan el abismo, la lucha personal y las redes que tendemos para no caer.</p>
 </section>
 
-
-
-
-<section class="section">
-
-<div class="container">
-
-
-<h2 class="section-title">
-FRAGMENTO CERO
-</h2>
-
-
-<div class="panel">
-
-
-<p>
-Este archivo reúne novelas, documentos, proyectos y registros pertenecientes al universo transmedia <strong>Fragmentos del Crepúsculo Humano</strong>.
-</p>
-
-
-<p>
-Un punto de acceso a historias, cronologías, alucinaciones y bitácoras que exploran la memoria, la identidad y la condición humana.
-</p>
-
-
-</div>
-
-
-</div>
-
+<!-- SECCIÓN: TIENDA LEVIATÁN -->
+<section id="tienda-leviatan">
+  <span class="hero-eyebrow">Librería de Autor</span>
+  <h2>Tienda Leviatán</h2>
+  
+  <p>El puerto de anclaje para todas mis obras. Acá podés conseguir las ediciones físicas y digitales, apoyar mi trabajo independiente y asegurarte un pasaje directo a la nave Eleonora y el universo Neuma.</p>
+  
+  <div class="cards">
+    <div class="card">
+      <h4>Universo Neuma</h4>
+      <p>Ediciones definitivas, mapas y material expandido de la saga. Sumergite en el worldbuilding completo.</p>
+    </div>
+    <div class="card">
+      <h4>Ficción Breve</h4>
+      <p>Antologías y relatos sueltos. Historias crudas, reales y otras que exploran los límites de nuestra especie.</p>
+    </div>
+    <div class="card">
+      <h4>Merchandising Literario</h4>
+      <p>Libretas de notas, bitácoras de escritura y arte conceptual de las novelas.</p>
+    </div>
+    <div class="card">
+      <h4>Mecenazgo directo</h4>
+      <p>Apoyá mi carrera de forma directa para que pueda seguir escribiendo con libertad absoluta.</p>
+    </div>
+  </div>
 </section>
 
-
-
-
-
-<section class="section">
-
-<div class="container">
-
-
-<h2 class="section-title">
-EXPLORAR
-</h2>
-
-
-
-<div class="grid grid-2">
-
-
-
-<div class="card">
-
-<h3>
-OBRAS
-</h3>
-
-<p>
-Novelas, relatos y proyectos literarios.
-</p>
-
-<a class="button" href="obras.html">
-ABRIR EXPEDIENTE
-</a>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-FDCH
-</h3>
-
-<p>
-Cronología, especies, facciones y documentación del universo.
-</p>
-
-<a class="button" href="fdch.html">
-ACCEDER
-</a>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-ALUCINACIONES
-</h3>
-
-<p>
-Conceptos visuales, ideas y fragmentos creativos.
-</p>
-
-<a class="button" href="alucinaciones.html">
-EXPLORAR
-</a>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-BITÁCORA
-</h3>
-
-<p>
-Proceso creativo, avances y registros personales.
-</p>
-
-<a class="button" href="bitacora.html">
-LEER REGISTROS
-</a>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-BIOGRAFÍA
-</h3>
-
-<p>
-Recorrido personal, influencias y origen del Archivo.
-</p>
-
-<a class="button" href="biografia.html">
-LEER EXPEDIENTE
-</a>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-CONTACTO
-</h3>
-
-<p>
-Canales oficiales, colaboradores y registro de visitantes.
-</p>
-
-<a class="button" href="contacto.html">
-ESTABLECER CONTACTO
-</a>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- SECCIÓN: PARKINSON -->
+<section id="parkinson">
+  <span class="hero-eyebrow">Bitácora Personal</span>
+  <h2>Parkinson</h2>
+  
+  <p>Escribir es un acto físico, y el cuerpo también cuenta su propia historia. En este espacio comparto reflexiones, crónicas y artículos sobre el proceso de convivir con el Parkinson sin dejar de crear.</p>
+  
+  <div class="quote-block">
+    <p>"La literatura no solo está en la mente; a veces se abre paso a través de la resistencia del propio cuerpo."</p>
+  </div>
+  
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-number">I</div>
+      <div class="step-content">
+        <h4><a href="#" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent);">Crónicas de un temblor</a></h4>
+        <p>Textos breves sobre el día a día, la escritura y la adaptación constante.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">II</div>
+      <div class="step-content">
+        <h4><a href="#" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent);">Recursos y Enlaces</a></h4>
+        <p>Información valiosa y lecturas recomendadas que fui recopilando en este camino.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- SECCIÓN: PROGRAMA LOBOS -->
+<section id="programa-lobos">
+  <span class="hero-eyebrow">Iniciativa Social | General Cabrera</span>
+  <h2>Programa: Lobos</h2>
+  
+  <p>Una red de apoyo de hombre a hombre integrada al Centro de Monitoreo Municipal. Un espacio de contención para hombres que atraviesan crisis personales, separaciones, o aislamiento, sin diagnósticos ni burocracia.</p>
 
-</main>
+  <div class="quote-block">
+    <p>"Nadie está solo en la manada."</p>
+  </div>
+  
+  <div class="comparison">
+    <div class="comparison-box solo">
+      <h4>El Aislamiento</h4>
+      <p>Acumulación de angustia. Pérdida de contacto con hijos. Muchos no acceden a los servicios tradicionales por estigma, burocracia o falta de empatía con la experiencia masculina.</p>
+    </div>
+    <div class="comparison-box con-apoyo">
+      <h4>La Manada</h4>
+      <p>Apoyo de par a par. Alguien que escucha sin juzgar porque ya pasó por una experiencia similar. Intervención temprana y contención real antes del desborde.</p>
+    </div>
+  </div>
+  
+  <p style="text-align: center; margin-top: 2rem;">
+    <a href="programa-lobos.html" style="display: inline-block; padding: 1rem 2rem; background: var(--accent); color: var(--bg); font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 4px;">Conocé el Programa Completo</a>
+  </p>
+</section>
 
 <footer>
-
-<div class="container">
-
-FRAGMENTO_CERO · GASTÓN SPRATT · 2026
-
-
-</div>
-
-
+  <p>Gastón Spratt — Fragmento Cero</p>
+  <p class="tagline">La escritura como trinchera.</p>
+  <p style="margin-top: 1rem; font-size: 0.75rem;">
+    <a href="#tienda-leviatan" style="color: var(--accent); text-decoration: none;">Tienda</a> | 
+    <a href="#parkinson" style="color: var(--accent); text-decoration: none;">Parkinson</a> | 
+    <a href="programa-lobos.html" style="color: var(--accent); text-decoration: none;">Programa Lobos</a>
+  </p>
 </footer>
 
-
-
 </body>
-
 </html>
