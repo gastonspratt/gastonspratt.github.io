@@ -13,6 +13,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Estilo para las placas de identidad */
+  .placas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+  }
+  .placa {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .placa::before {
+    content: '›';
+    color: var(--title);
+    font-weight: bold;
+  }
+</style>
 </head>
 
 <body>
@@ -75,9 +103,6 @@ FRAGMENTO_CERO · NIVEL_1
 GASTÓN SPRATT
 </h1>
 
-<p class="metadata">
-ESCRITURA COMPROMETIDA · PADRE PRESENTE · EMPRENDEDOR · INICIATIVA COMUNITARIA
-</p>
 <p class="metadata" style="margin-bottom: 25px;">
 MEMORIA · IDENTIDAD · PERSISTENCIA
 </p>
@@ -104,6 +129,13 @@ Y el amor es una alucinación algorítmica."
 
 </div>
 
+<!-- PLACAS DE IDENTIDAD -->
+<div class="placas-grid">
+  <div class="placa">Escritura y creación de contenido</div>
+  <div class="placa">Paternidad responsable</div>
+  <div class="placa">Activismo y trabajo comunitario</div>
+</div>
+
 </div>
 
 <div class="hero-image">
@@ -125,7 +157,11 @@ Y el amor es una alucinación algorítmica."
 <div class="container">
 
 <p>
-FRAGMENTO_CERO · ARCHIVO CENTRAL · GASTÓN SPRATT
+FRAGMENTO_CERO · INICIO · GASTÓN SPRATT
+</p>
+
+<p class="footer-small" style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--muted);">
+Última actualización: Septiembre 2026
 </p>
 
 </div>
