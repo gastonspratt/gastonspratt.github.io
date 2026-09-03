@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>FdCH | Gastón Spratt</title>
 
 <link rel="icon" type="image/png" href="favicon.png">
@@ -13,285 +10,237 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<style>
+    /* Estilos específicos para la sección FdCH */
+    .fdch-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+    }
 
+    .section-card {
+        background-color: var(--panel);
+        border: 1px solid var(--border);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 12px;
+    }
+
+    .section-card h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+        font-family: 'IBM Plex Mono', monospace;
+        letter-spacing: 1px;
+    }
+
+    .grid-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .card-item {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        padding: 1.2rem;
+        border-radius: 8px;
+        transition: border-color 0.2s ease;
+    }
+
+    .card-item:hover {
+        border-color: var(--accent);
+    }
+
+    .card-item h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: var(--title, #fff);
+    }
+
+    .card-item p {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-bottom: 1.2rem;
+    }
+
+    .btn {
+        display: inline-block;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.75rem;
+        text-decoration: none;
+        color: var(--bg, #0a0a0a);
+        background-color: var(--accent);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .lore-list, .char-list {
+        list-style: none;
+    }
+
+    .lore-list li, .char-list li {
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .lore-list li:last-child, .char-list li:last-child {
+        border-bottom: none;
+    }
+
+    .char-name {
+        font-weight: bold;
+        color: var(--title, #fff);
+    }
+
+    .char-role {
+        font-size: 0.85rem;
+        color: var(--accent);
+        font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .meta-header {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.75rem;
+        color: var(--muted);
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+</style>
 </head>
 
 <body>
 
 <div class="archive-loader">
-
-<p>INGRESANDO A NEUMA...</p>
-<p>PERMISO DEL CONSEJO</p>
+<p>CONSULTANDO ARCHIVO...</p>
+<p>REGISTRO FdCH</p>
 <p>NIVEL_4</p>
-<p>PASE DE LA HERMANDAD</p>
 <p>ACCESO CONCEDIDO</p>
-
 </div>
 
 <header>
-
 <div class="container">
-
 <nav>
-
 <a href="index.html" class="logo">
 GASTÓN SPRATT
 </a>
-
 <div class="menu">
-
 <a href="index.html">Inicio</a>
 <a href="biografia.html">Biografía</a>
 <a href="obras.html">Obras</a>
-<a href="fdch.html">FdCH</a>
+<a href="fdch.html" class="active">FdCH</a>
 <a href="alucinaciones.html">Alucinaciones</a>
 <a href="bitacora.html">Bitácora</a>
+<a href="parkinson.html">Parkinson</a>
+<a href="programa-lobos.html">Programa Lobos</a>
+<a href="tienda-leviatan.html">Tienda Leviatán</a>
 <a href="contacto.html">Contacto</a>
-
 </div>
-
 </nav>
-
 </div>
-
 </header>
 
 <main>
+<div class="fdch-container">
+    
+    <div style="margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem;">
+        <div class="meta-header">FRAGMENTO_CERO · ARCHIVO_UNIVERSO</div>
+        <h1 style="font-size: 2rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem;">FdCH</h1>
+        <p style="color: var(--muted); font-size: 0.95rem;">Documentación oficial del universo de Fragmentos del Crepúsculo Humano. Cronologías, expedientes, capítulos y puntos de acceso transmedia.</p>
+    </div>
 
-<section class="hero-small">
+    <section class="section-card">
+        <h2>ARCHIVO_001 // HISTORIA & LORE</h2>
+        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--muted);">Ejes centrales del universo: memoria, identidad, tecnología y resistencia estelar en Neuma.</p>
+        <ul class="lore-list">
+            <li>
+                <strong style="color: var(--title, #fff);">El Origen del Conflicto:</strong> Cronología de la expansión y el punto de quiebre en los sistemas periféricos.
+            </li>
+            <li>
+                <strong style="color: var(--title, #fff);">La Travesía de La Eleonora:</strong> Bitácoras de la nave insignia y su rol crucial en el equilibrio político y social del sector.
+            </li>
+        </ul>
+    </section>
 
-<div class="container">
+    <section class="section-card">
+        <h2>DOSIERES // PERSONAJES</h2>
+        <ul class="char-list">
+            <li>
+                <span class="char-name">Velithan</span> <span class="char-role">// Operativo / Navegante</span>
+                <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem;">Pieza clave en las incursiones a través de los cuadrantes inestables de Neuma.</p>
+            </li>
+            <li>
+                <span class="char-name">Mira</span> <span class="char-role">// Enlace / Estratega</span>
+                <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem;">Custodio de los registros fragmentados y la memoria histórica de la tripulación.</p>
+            </li>
+        </ul>
+    </section>
 
-<p class="eyebrow">
-FRAGMENTO_CERO · NIVEL_4
-</p>
+    <section class="section-card">
+        <h2>REGISTRO NARRATIVO // CAPÍTULOS</h2>
+        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--muted);">Índice del núcleo narrativo principal y relatos asociados.</p>
+        <div class="grid-options">
+            <div class="card-item">
+                <h3>Novela Principal</h3>
+                <p>El núcleo de la historia que vertebra todo el universo transmedia.</p>
+                <a href="#" class="btn">ACCEDER</a>
+            </div>
+            <div class="card-item">
+                <h3>Relatos y Archivos</h3>
+                <p>Crónicas secundarias, documentos recuperados y viñetas del mundo.</p>
+                <a href="#" class="btn">ABRIR</a>
+            </div>
+        </div>
+    </section>
 
-<h1>FDCH</h1>
-
-<p class="hero-description">
-Documentación oficial del universo Fragmentos del Crepúsculo Humano. Cronologías, archivos, plataformas y puntos de acceso al proyecto.
-</p>
-
-</div>
-
-</section>
-
-
-
-<section class="section">
-
-<div class="container">
-
-<div class="panel">
-
-<p class="panel-superior">
-ARCHIVO_0001
-</p>
-
-<h2>FRAGMENTOS DEL CREPÚSCULO HUMANO</h2>
-
-<p>
-Fragmentos del Crepúsculo Humano es un universo narrativo transmedia en construcción permanente. Novelas, relatos, documentos, registros, plataformas digitales y experiencias interactivas conforman un mismo proyecto creativo que continúa expandiéndose.
-</p>
-
-<p>
-Cada historia aporta una perspectiva diferente sobre un mismo universo. Los acontecimientos, personajes y documentos dialogan entre sí para construir una experiencia donde cada descubrimiento amplía el significado del conjunto.
-</p>
-
-<p>
-La memoria, la identidad, la tecnología, la humanidad, la resistencia y el futuro constituyen los ejes centrales del proyecto. Cada fragmento incorpora nueva información y contribuye al desarrollo de un universo que evoluciona junto con sus lectores.
-</p>
-
-<img
-src="imagenes/mapa-neuma.png"
-class="mapa-neuma"
-alt="Mapa de soberanías estelares de Neuma">
-
-<p class="caption">
-MAPA DE SOBERANÍAS ESTELARES · Versión 7.34
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section class="section">
-
-<div class="container">
-
-<div class="panel">
-
-<p class="panel-superior">
-ARCHIVO_0002
-</p>
-
-<h2>PUNTOS DE ACCESO</h2>
-
-<p>
-Explorá las distintas puertas de entrada al universo de Fragmentos del Crepúsculo Humano.
-</p>
-
-<div class="grid grid-2">
-
-<div class="card">
-
-<h3>Novelas principales</h3>
-
-<p>
-Núcleo narrativo del universo.
-</p>
-
-<a class="button"
-href="https://www.patreon.com/collection/2230916?view=expanded"
-target="_blank">
-ACCEDER
-</a>
+    <section class="section-card">
+        <h2>PUNTOS DE ACCESO</h2>
+        <div class="grid-options">
+            <div class="card-item">
+                <h3>Aventura interactiva</h3>
+                <p>Da tus primeros pasos por la galaxia de Neuma.</p>
+                <a href="#" class="btn">JUGAR</a>
+            </div>
+            <div class="card-item">
+                <h3>Terminal antigua</h3>
+                <p>Artículos y crónicas recuperadas del universo.</p>
+                <a href="#" class="btn">CONSULTAR</a>
+            </div>
+        </div>
+    </section>
 
 </div>
-
-
-
-<div class="card">
-
-<h3>Aventura interactiva</h3>
-
-<p>
-Da tus primeros pasos por la galaxia de Neuma.
-</p>
-
-<a class="button"
-href="https://www.patreon.com/cw/fragmentosdelcrepusculohumano"
-target="_blank">
-JUGAR
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Terminal antigua</h3>
-
-<p>
-Artículos, crónicas y documentos recuperados del universo.
-</p>
-
-<a class="button"
-href="https://fragmentosdelcrepusculohumano.blogspot.com/"
-target="_blank">
-ABRIR
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Mercado Negro</h3>
-
-<p>
-Intercambio de objetos y recursos del universo.
-</p>
-
-<a class="button"
-href="https://t.me/fragmentosdelcrepusculohumano"
-target="_blank">
-ENTRAR
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Shorts del universo</h3>
-
-<p>
-Material audiovisual y cronologías narrativas.
-</p>
-
-<a class="button"
-href="https://www.tiktok.com/@vto.news"
-target="_blank">
-VER
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Museo de Lysentra</h3>
-
-<p>
-Archivos organizados por niveles de acceso.
-</p>
-
-<a class="button"
-href="https://cafecito.app/archivoneuma"
-target="_blank">
-VISITAR
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 </main>
 
 <footer>
-
 <div class="container">
-
 <p>
-
-FRAGMENTO_CERO · ARCHIVO CENTRAL · GASTÓN SPRATT
-
+FRAGMENTO_CERO · FdCH · GASTÓN SPRATT
 </p>
-
-<p class="footer-small">
-
-Última actualización: Julio 2026
-
+<p class="footer-small" style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--muted);">
+Última actualización: Septiembre 2026
 </p>
-
 </div>
-
 </footer>
 
 <script>
-
 window.addEventListener("load", () => {
-
-const loader = document.querySelector(".archive-loader");
-
-setTimeout(() => {
-
-loader.classList.add("hidden");
-
-}, 900);
-
+    const loader = document.querySelector(".archive-loader");
+    setTimeout(() => {
+        loader.classList.add("hidden");
+    }, 900);
 });
-
 </script>
 
 </body>
-
 </html>
