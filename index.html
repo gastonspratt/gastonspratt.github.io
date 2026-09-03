@@ -4,142 +4,287 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gastón Spratt | Escritor</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
-<style>
-  /* Corrección definitiva de grilla para que la foto y el manifiesto no colisionen */
-  .manifiesto-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
-    margin-top: 25px;
-  }
-  @media (max-width: 768px) {
-    .manifiesto-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .manifiesto-foto img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-    border: 1px solid rgba(184, 138, 87, 0.3);
-    filter: grayscale(15%);
-  }
-  .firma {
-    margin-top: 20px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.9rem;
-    color: #B88A57;
-    letter-spacing: 2px;
-  }
-</style>
 </head>
 
 <body>
 
 <div class="archive-loader">
-<p>> INICIALIZANDO ARCHIVO...</p>
-<p>> IDENTIDAD: GASTÓN SPRATT</p>
-<p>> UNIVERSO: FRAGMENTO_CERO</p>
-<p>> ACCESO CONCEDIDO</p>
+
+<p>INICIALIZANDO ARCHIVO...</p>
+<p>IDENTIDAD: GASTÓN SPRATT</p>
+<p>UNIVERSO: FRAGMENTO_CERO</p>
+<p>NIVEL_1</p>
+<p>ACCESO CONCEDIDO</p>
+
 </div>
 
-<!-- MENÚ EN ORDEN ALFABÉTICO -->
+<header>
+
+<div class="container">
+
+<nav>
+
+<a href="index.html" class="logo">
+GASTÓN SPRATT
+</a>
+
 <div class="menu">
-<a href="alucinaciones.html">ALUCINACIONES</a>
-<a href="biografia.html">BIOGRAFÍA</a>
-<a href="bitacora.html">BITÁCORA</a>
-<a href="contacto.html">CONTACTO</a>
-<a href="fdch.html">FDCH</a>
-<a href="index.html" class="activo">INICIO</a>
-<a href="obras.html">OBRAS</a>
-<a href="#parkinson">PARKINSON</a>
-<a href="programa-lobos.html">PROGRAMA LOBOS</a>
-<a href="#tienda-leviatan">TIENDA LEVIATÁN</a>
+
+<a href="index.html">Inicio</a>
+<a href="biografia.html">Biografía</a>
+<a href="obras.html">Obras</a>
+<a href="fdch.html">FdCH</a>
+<a href="alucinaciones.html">Alucinaciones</a>
+<a href="bitacora.html">Bitácora</a>
+<a href="#parkinson">Parkinson</a>
+<a href="programa-lobos.html">Programa Lobos</a>
+<a href="#tienda-leviatan">Tienda Leviatán</a>
+<a href="contacto.html">Contacto</a>
+
 </div>
 
-<h1>Gastón Spratt</h1>
+</nav>
 
-<p class="estado">ARCHIVO_PERSONAL · NIVEL_1</p>
-<p class="subtitulo">ESCRITOR · PADRE · HACEDOR DE MUNDOS</p>
-<p class="frase">MEMORIA · IDENTIDAD · PERSISTENCIA</p>
-
-<!-- SECCIÓN: MANIFIESTO -->
-<div class="section">
-    <p class="terminal-title">// MANIFIESTO</p>
-
-    <div class="manifiesto-grid">
-        <div class="manifiesto-texto">
-            <h3>
-                "La familia es una ilusión.<br><br>
-                La memoria es ficción.<br><br>
-                Y el amor es una alucinación algorítmica."
-            </h3>
-            <div class="firma">
-                — Gastón Spratt
-            </div>
-        </div>
-
-        <div class="manifiesto-foto">
-            <img src="imagenes/gaston-retrato.png" alt="Gastón Spratt">
-        </div>
-    </div>
 </div>
 
-<!-- SECCIÓN: PARKINSON -->
-<div class="section" id="parkinson">
-<p class="terminal-title">// PARKINSON</p>
-<h3>CUERPO Y OFICIO</h3>
-<p>Escribir es un acto físico, y el cuerpo también cuenta su propia historia. Este espacio recopila crónicas, reflexiones y artículos sobre el proceso de convivir con el Parkinson sin detener el motor de la creación literaria.</p>
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-layout">
+
+<div class="hero-text">
+
+<p class="eyebrow">
+FRAGMENTO_CERO · NIVEL_1
+</p>
+
+<h1>
+GASTÓN SPRATT
+</h1>
+
+<p class="metadata">
+ESCRITOR · PADRE · HACEDOR DE MUNDOS
+</p>
+<p class="metadata" style="margin-bottom: 25px;">
+MEMORIA · IDENTIDAD · PERSISTENCIA
+</p>
+
+<p class="hero-description">
+Desde el interior de <strong>La Eleonora</strong> hasta las calles de General Cabrera. Aquí conviven las historias que rozan el abismo, la lucha personal y las trincheras que armamos para resistir al olvido.
+</p>
+
+<div class="manifesto">
+
+<p class="manifesto-title">
+// MANIFIESTO
+</p>
+
+<p>
+"La familia es una ilusión.
+</p>
+
+<p>
+La memoria es ficción.
+</p>
+
+<p>
+Y el amor es una alucinación algorítmica."
+</p>
+
+<span>— Gastón Spratt</span>
+
 </div>
 
-<!-- SECCIÓN: PROGRAMA LOBOS -->
-<div class="section" id="programa-lobos">
-<p class="terminal-title">// PROGRAMA_LOBOS</p>
-<h3>INICIATIVA SOCIAL · GENERAL CABRERA</h3>
-<p>Una red de apoyo de hombre a hombre integrada al Centro de Monitoreo Municipal. Un espacio de contención temprana para quienes atraviesan crisis personales, separaciones o aislamiento, sin diagnósticos, burocracia ni estigmas.</p>
-<p><a href="programa-lobos.html" style="color: inherit; text-decoration: underline; font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem;">&gt; Acceder al sitio completo del Programa Lobos</a></p>
 </div>
 
-<!-- SECCIÓN: TIENDA LEVIATÁN -->
-<div class="section" id="tienda-leviatan">
-<p class="terminal-title">// TIENDA_LEVIATÁN</p>
-<h3>LIBRERÍA DE AUTOR</h3>
-<p>El puerto de anclaje principal para las obras del universo Neuma. Ediciones físicas, digitales, material expandido y un canal directo de mecenazgo para sostener la escritura independiente con total libertad.</p>
+<div class="hero-image">
+
+<img src="imagenes/gaston-retrato.png" alt="Gastón Spratt">
+
 </div>
 
-<!-- ESTADO DEL ARCHIVO -->
-<div class="section">
-<p class="terminal-title">// ESTADO_DEL_ARCHIVO</p>
-<pre class="terminal">Autor..................... ACTIVO
-Proyecto.................. EN DESARROLLO
-Universo.................. EXPANDIÉNDOSE
-Última actualización...... 03 · SEP · 2026</pre>
-<p>&gt; El Archivo continúa creciendo.</p>
 </div>
 
-<div class="section">
-<div class="terminal terminal-footer">
-<div class="datos">
-AUTOR............... GASTÓN SPRATT<br>
-ARCHIVO............. PERSONAL<br>
-ESTADO DEL SISTEMA.. <span class="online">● ONLINE</span>
 </div>
+
+</section>
+
+<!-- SECCIÓN NUEVA 1: PARKINSON -->
+<section class="section" id="parkinson">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-number">01</span>
+
+<h2>PARKINSON</h2>
+
 </div>
+
+<div class="panel">
+
+<p class="manifesto-title">
+// CUERPO Y OFICIO
+</p>
+
+<h3>LA ESCRITURA COMO RESISTENCIA FÍSICA</h3>
+
+<p>
+Escribir es un acto físico, y el cuerpo también cuenta su propia historia. Este espacio recopila crónicas, reflexiones y artículos sobre el proceso de convivir con el Parkinson sin detener el motor de la creación literaria ni bajar los brazos en la página.
+</p>
+
 </div>
+
+</div>
+
+</section>
+
+<!-- SECCIÓN NUEVA 2: PROGRAMA LOBOS -->
+<section class="section" id="programa-lobos">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-number">02</span>
+
+<h2>PROGRAMA LOBOS</h2>
+
+</div>
+
+<div class="panel">
+
+<p class="manifesto-title">
+// INICIATIVA SOCIAL · GENERAL CABRERA
+</p>
+
+<h3>NADIE ESTÁ SOLO EN LA MANADA</h3>
+
+<p>
+Una red de apoyo de hombre a hombre integrada al Centro de Monitoreo Municipal. Un espacio de contención temprana para quienes atraviesan crisis personales, separaciones o aislamiento, sin diagnósticos, burocracia ni estigmas.
+</p>
+
+<a href="programa-lobos.html" class="button">
+Conocer el Programa Completo →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SECCIÓN NUEVA 3: TIENDA LEVIATÁN -->
+<section class="section" id="tienda-leviatan">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-number">03</span>
+
+<h2>TIENDA LEVIATÁN</h2>
+
+</div>
+
+<div class="panel">
+
+<p class="manifesto-title">
+// LIBRERÍA DE AUTOR
+</p>
+
+<h3>EL PUERTO DE ANCLAJE</h3>
+
+<p>
+El punto de acceso principal para las obras del universo Neuma. Ediciones físicas, digitales, material expandido y un canal directo de mecenazgo para sostener la escritura independiente con total libertad.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ESTADO DEL SISTEMA -->
+<section class="section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-number">04</span>
+
+<h2>ESTADO DEL REGISTRO</h2>
+
+</div>
+
+<div class="panel">
+
+<p class="manifesto-title">
+// CONSOLA DEL ARCHIVO
+</p>
+
+<div class="terminal">
+Autor..................... ACTIVO<br>
+Proyecto.................. EN DESARROLLO<br>
+Universo.................. EXPANDIÉNDOSE<br>
+ESTADO DEL SISTEMA........ <span class="barra">● ONLINE</span><br>
+ÚLTIMA ACTUALIZACIÓN...... SEPTIEMBRE 2026
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="container">
+
+<p>
+FRAGMENTO_CERO · ARCHIVO CENTRAL · GASTÓN SPRATT
+</p>
+
+<p class="footer-small" style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--muted);">
+Última actualización: Septiembre 2026
+</p>
+
+</div>
+
+</footer>
 
 <script>
+
 window.addEventListener("load", () => {
-  const loader = document.querySelector(".archive-loader");
-  if (loader) {
-    setTimeout(() => { loader.style.display = 'none'; }, 600);
-  }
+
+const loader = document.querySelector(".archive-loader");
+
+setTimeout(() => {
+
+loader.classList.add("hidden");
+
+}, 900);
+
 });
+
 </script>
 
 </body>
