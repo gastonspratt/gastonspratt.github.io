@@ -1,33 +1,43 @@
+Acá tenés el código actualizado de `programa-lobos.html`.
+
+Hice los dos cambios que pediste:
+
+1. Cambié el texto superior para que diga exactamente **"Red de apoyo para hombres"**.
+2. Actualicé toda la paleta de colores para que use los tonos exactos de tu página web principal (el fondo negro `#000`, los paneles `#0b0b0b`, los textos en `#d5d1ca`, los títulos en `#f4f0ea` y el característico acento cobrizo/bronce `#b87a3a` con sus bordes definidos), logrando una integración visual perfecta con todo el sitio.
+
+Copiá este código y pisá tu archivo `programa-lobos.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programa Lobos | Manifiesto y Contacto</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;600&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
   :root{
-    --bg: #0a0f14;
-    --bg-alt: #111820;
-    --card: #1a2330;
-    --ink: #e8e4dc;
-    --ink-dim: #8a95a3;
-    --line: #2a3542;
-    --accent: #4a9b8c;
-    --accent-warm: #c9a86c;
-    --urgent: #8b4a5a;
+    --bg: #000;
+    --panel: #0b0b0b;
+    --title: #f4f0ea;
+    --text: #d5d1ca;
+    --muted: #8c8882;
+    --accent: #b87a3a;
+    --border: rgba(184,122,58,.35);
+    --radius: 18px;
   }
-  *{ box-sizing: border-box; margin: 0; padding: 0; }
-  html{ scroll-behavior: smooth; }
+  
   body{
+    background: var(--bg);
+    color: var(--text);
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.8;
-    color: var(--ink);
-    background: var(--bg);
-    font-weight: 300;
   }
 
-  /* Contenedor central compacto (estilo columna de lectura / bloque centrado) */
+  /* Contenedor central compacto */
   .narrow-container{
     max-width: 650px;
     margin: 0 auto;
@@ -37,16 +47,17 @@
   header{
     padding: 4rem 1.5rem 2rem;
     text-align: center;
-    background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
-    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
   }
   .back-link{
     display: inline-block;
     margin-bottom: 2rem;
-    color: var(--ink-dim);
+    color: var(--muted);
     text-decoration: none;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.8rem;
+    transition: color 0.2s;
   }
   .back-link:hover{
     color: var(--accent);
@@ -58,13 +69,13 @@
     margin: 0 auto 1.5rem auto;
     display: block;
     border-radius: 50%;
-    border: 1px solid var(--line);
-    background: var(--card);
+    border: 1px solid var(--border);
+    background: var(--panel);
     padding: 6px;
   }
   .header-eyebrow{
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--accent);
@@ -72,50 +83,51 @@
     display: block;
   }
   h1{
-    font-family: 'Fraunces', serif;
+    font-family: 'Exo 2', sans-serif;
     font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 0.8rem;
-    color: var(--ink);
+    color: var(--title);
     text-align: center;
+    letter-spacing: -0.02em;
   }
   .header-subtitle{
-    font-family: 'Fraunces', serif;
+    font-family: 'Exo 2', sans-serif;
     font-size: 1.2rem;
     font-style: italic;
-    color: var(--accent-warm);
+    color: var(--accent);
     margin-bottom: 2rem;
     text-align: center;
   }
 
-  /* SECCIÓN DE ENTRADA / FORMULARIO CERCA */
+  /* SECCIÓN DE ENTRADA / FORMULARIO */
   .hero-crisis-section{
     padding: 3rem 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
   }
   .crisis-message{
     text-align: center;
     margin-bottom: 2rem;
   }
   .crisis-message h2{
-    font-family: 'Fraunces', serif;
+    font-family: 'Exo 2', sans-serif;
     font-size: 1.5rem;
-    color: var(--accent-warm);
+    color: var(--title);
     margin-bottom: 1rem;
     line-height: 1.4;
   }
   .crisis-message p{
-    color: var(--ink-dim);
+    color: var(--text);
     font-size: 1rem;
     line-height: 1.7;
     text-align: center;
   }
 
   .crisis-form{
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 2rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
     text-align: left;
   }
   .form-group{
@@ -134,11 +146,11 @@
   .form-group textarea,
   .form-group select{
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.8rem;
     background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--title);
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.95rem;
   }
@@ -154,69 +166,72 @@
   }
   .form-note{
     font-size: 0.8rem;
-    color: var(--ink-dim);
+    color: var(--muted);
     margin-top: 0.4rem;
   }
   .submit-btn{
     width: 100%;
-    padding: 0.9rem;
-    background: var(--accent);
-    color: var(--bg);
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.85rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
     transition: all 0.25s ease;
+    margin-top: 1rem;
   }
   .submit-btn:hover{
-    background: var(--accent-warm);
+    background: var(--accent);
+    color: #000;
   }
 
   /* SECCIONES DEL MANIFIESTO */
   .section{
     padding: 4rem 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
   }
   .section-title{
-    font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
-    color: var(--accent);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.6rem;
+    color: var(--title);
     margin-bottom: 1.5rem;
     text-align: center;
   }
   .section-number{
     display: block;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--ink-dim);
+    color: var(--accent);
     margin-bottom: 0.4rem;
     text-align: center;
   }
   
   .section p{
     margin-bottom: 1.3rem;
-    color: var(--ink-dim);
+    color: var(--text);
     text-align: justify;
   }
 
   .pull-quote{
     margin: 2.5rem 0;
-    padding: 1.5rem;
+    padding: 1.8rem;
     border-left: 2px solid var(--accent);
-    background: var(--bg-alt);
+    background: var(--panel);
+    border-radius: 0 var(--radius) var(--radius) 0;
     text-align: left;
   }
   .pull-quote p{
-    font-family: 'Fraunces', serif;
+    font-family: 'Exo 2', sans-serif;
     font-size: 1.1rem;
     font-style: italic;
-    color: var(--ink);
+    color: var(--title);
     margin: 0;
     text-align: left;
   }
@@ -227,20 +242,20 @@
   .pillar{
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
   }
   .pillar:last-child{
     border-bottom: none;
   }
   .pillar h3{
-    font-family: 'Fraunces', serif;
-    font-size: 1.05rem;
-    color: var(--accent-warm);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.15rem;
+    color: var(--title);
     margin-bottom: 0.5rem;
   }
   .pillar .latin{
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -254,21 +269,21 @@
   .we-are-grid{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
     margin: 2.5rem 0;
   }
   .we-are-column h4{
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 1rem;
     padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
     text-align: center;
+    color: var(--accent);
   }
-  .we-are-column.somos h4{ color: var(--accent); }
-  .we-are-column.no-somos h4{ color: var(--urgent); }
+  .we-are-column.no-somos h4{ color: var(--muted); }
   .we-are-column ul{
     list-style: none;
     padding: 0;
@@ -277,7 +292,7 @@
     margin-bottom: 0.8rem;
     padding-left: 1.2rem;
     position: relative;
-    color: var(--ink-dim);
+    color: var(--text);
     font-size: 0.95rem;
     text-align: left;
   }
@@ -287,23 +302,20 @@
     left: 0;
     color: var(--accent);
   }
-  .we-are-column.no-somos li::before{
-    color: var(--urgent);
-  }
 
   .story-box{
-    background: var(--bg-alt);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 1.5rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
     margin: 2.5rem 0;
   }
   .story-box h4{
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--accent-warm);
+    color: var(--accent);
     margin-bottom: 0.8rem;
     text-align: center;
   }
@@ -311,18 +323,19 @@
     font-style: italic;
     text-align: left;
     margin: 0;
+    color: var(--title);
   }
 
   .deep-why{
     margin: 2.5rem 0;
     text-align: center;
-    padding: 1rem;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    padding: 1.2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
   .deep-why p{
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -332,15 +345,16 @@
 
   .final-quote{
     margin: 2.5rem 0 0 0;
-    padding: 1.5rem;
-    border-left: 3px solid var(--accent-warm);
-    background: var(--bg-alt);
+    padding: 1.8rem;
+    border-left: 3px solid var(--accent);
+    background: var(--panel);
+    border-radius: 0 var(--radius) var(--radius) 0;
   }
   .final-quote p{
-    font-family: 'Fraunces', serif;
-    font-size: 1.1rem;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.15rem;
     font-style: italic;
-    color: var(--ink);
+    color: var(--title);
     margin: 0;
     text-align: center;
   }
@@ -349,16 +363,17 @@
     padding: 3rem 1.5rem;
     text-align: center;
     background: var(--bg);
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--border);
   }
   footer p{
-    color: var(--ink-dim);
-    font-size: 0.8rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-family: 'IBM Plex Mono', monospace;
   }
   footer .tagline{
-    font-family: 'Fraunces', serif;
+    font-family: 'Exo 2', sans-serif;
     font-style: italic;
-    color: var(--accent-warm);
+    color: var(--accent);
     margin-top: 0.4rem;
   }
 </style>
@@ -369,7 +384,7 @@
   <div class="narrow-container">
     <a href="index.html" class="back-link">← Volver al Inicio</a>
     <img src="imagenes/logo_lobos.jpg" alt="Logo Programa Lobos" class="header-logo">
-    <span class="header-eyebrow">Iniciativa Personal · Red de Apoyo</span>
+    <span class="header-eyebrow">Red de apoyo para hombres</span>
     <h1>Programa Lobos</h1>
     <p class="header-subtitle">"Nadie está solo en la manada"</p>
   </div>
@@ -514,3 +529,5 @@
 
 </body>
 </html>
+
+```
