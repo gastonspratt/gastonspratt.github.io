@@ -27,25 +27,22 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    opacity: 0.035; /* Sutil y elegante para que no afecte la lectura */
+    opacity: 0.035;
     z-index: -1;
     pointer-events: none;
   }
 
-  /* Ajuste de diseño: paneles y secciones centrados y con ancho acotado en rectángulos */
-  .container, .section, .hero .container {
-    max-width: 780px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .panel, .card, .section-heading, .grid-2, .contact-form, .terminal {
+  /* Centrar y acotar el ancho únicamente del contenido principal (main), manteniendo el header intacto */
+  main {
     max-width: 780px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-  .section {
-    padding: 40px 20px;
+
+  main .section {
+    padding: 40px 0;
   }
+
   @media (max-width: 768px) {
     hr, .archive-divider, section {
       border: none;
@@ -55,10 +52,6 @@
     }
     body {
       overflow-x: hidden;
-    }
-    .container, .section {
-      padding-left: 15px;
-      padding-right: 15px;
     }
   }
 </style>
@@ -96,8 +89,8 @@
 <main>
 
 <!-- HERO -->
-<section class="hero">
-<div class="container" style="text-align: center;">
+<section class="hero" style="padding: 50px 0 30px 0;">
+<div style="text-align: center;">
 <p class="eyebrow">RED DE APOYO ENTRE HOMBRES</p>
 <h1 style="font-family: 'Exo 2', sans-serif; font-size: clamp(2.3rem, 5vw, 4rem); color: var(--title); margin-bottom: 20px;">
 PROGRAMA LOBOS
@@ -114,7 +107,6 @@ PROGRAMA LOBOS
 
 <!-- INTRO / MANIFIESTO DEL PROGRAMA -->
 <section class="section">
-<div class="container">
 <div class="panel">
 <p class="manifesto-title">// PRINCIPIO RECTOR</p>
 <p style="font-size: 1.05rem; margin-bottom: 20px;">
@@ -127,12 +119,10 @@ Programa Lobos es una red de apoyo entre hombres. Un espacio donde un hombre que
 Acá hay alguien dispuesto a escucharte.
 </p>
 </div>
-</div>
 </section>
 
 <!-- FILOSOFÍA Y PILARES -->
 <section class="section">
-<div class="container">
 <div class="section-heading">
 <span class="section-number">01</span>
 <h2>FILOSOFÍA Y PILARES</h2>
@@ -172,13 +162,10 @@ Los estoicos entendieron algo fundamental: no siempre podemos elegir lo que nos 
 <p>Somos parte de algo más grande. Nadie está solo en la manada. Un par no viene a salvarte; viene a sentarse al lado tuyo mientras atravesás el incendio y a ayudarte a buscar asistencia especializada si hace falta.</p>
 </div>
 </div>
-
-</div>
 </section>
 
 <!-- NUESTRA HISTORIA Y ORIGEN -->
 <section class="section">
-<div class="container">
 <div class="section-heading">
 <span class="section-number">02</span>
 <h2>NUESTRA HISTORIA Y ORIGEN</h2>
@@ -199,12 +186,10 @@ Hasta que la ayuda apareció en un lugar completamente inesperado: un empleado d
 No era psicólogo, médico ni funcionario. Era un hombre que había pasado por lo mismo y reconoció el dolor en otro. Ese gesto rompió el aislamiento.
 </p>
 </div>
-</div>
 </section>
 
 <!-- TESTIMONIO DEL FUNDADOR -->
 <section class="section">
-<div class="container">
 <div class="section-heading">
 <span class="section-number">03</span>
 <h2>TESTIMONIO DEL FUNDADOR</h2>
@@ -221,12 +206,10 @@ Eso es lo que queremos replicar. Que ningún hombre llegue a donde llegué yo si
 Programa Lobos no nace para buscar culpables, ni como venganza, ni contra las mujeres, las familias o las instituciones. Nace de una pregunta mucho más sencilla: <strong>¿Qué podemos hacer antes de que un hombre llegue al límite?</strong>
 </p>
 </div>
-</div>
 </section>
 
 <!-- POR QUÉ UN PAR -->
 <section class="section">
-<div class="container">
 <div class="section-heading">
 <span class="section-number">04</span>
 <h2>POR QUÉ UN PAR</h2>
@@ -246,12 +229,10 @@ Ayuda a ordenar · Comparte experiencia cuando corresponde · Detecta señales d
 No diagnostica · No receta · No promete salvar a nadie · No reemplaza emergencias.
 </div>
 </div>
-</div>
 </section>
 
 <!-- LO QUE SOMOS / LO QUE NO SOMOS -->
 <section class="section">
-<div class="container">
 <div class="section-heading">
 <span class="section-number">05</span>
 <h2>ALCANCE Y LÍMITES</h2>
@@ -286,13 +267,10 @@ No diagnostica · No receta · No promete salvar a nadie · No reemplaza emergen
 <em>Acompañar a un hombre en su dolor no significa justificar sus actos. Podemos comprender el sufrimiento de una persona y, al mismo tiempo, exigirle responsabilidad por lo que hace con ese sufrimiento.</em>
 </p>
 </div>
-
-</div>
 </section>
 
 <!-- CUANDO LA CRISIS SUPERA AL PAR -->
 <section class="section">
-<div class="container">
 <div class="section-heading">
 <span class="section-number">06</span>
 <h2>CRISIS AGUDA Y SEGURIDAD</h2>
@@ -307,12 +285,10 @@ Hay situaciones que requieren intervención profesional inmediata. Si una person
 En esos casos, el objetivo del par es no dejar sola a la persona y ayudarla a acceder inmediatamente a los servicios de emergencia. El par no juega a ser médico ni promete secreto absoluto frente a un riesgo inminente. <strong>La vida está primero.</strong>
 </p>
 </div>
-</div>
 </section>
 
 <!-- FORMULARIO DE CONTACTO -->
 <section class="section" id="contacto">
-<div class="container">
 <div class="section-heading">
 <span class="section-number">07</span>
 <h2>SOLICITAR ACOMPAÑAMIENTO</h2>
@@ -344,8 +320,6 @@ En esos casos, el objetivo del par es no dejar sola a la persona y ayudarla a ac
 
 <button type="submit" class="button" style="width:100%; text-align:center; cursor:pointer; padding:18px;">Solicitar acompañamiento de un par</button>
 </form>
-</div>
-
 </div>
 </section>
 
