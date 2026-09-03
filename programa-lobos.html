@@ -14,6 +14,24 @@
 
 <link rel="stylesheet" href="style.css">
 <style>
+  /* Fondo con marca de agua del logo del lobo en grande y sutil */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(650px, 90vw);
+    height: min(650px, 90vw);
+    background-image: url('logo_lobos.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.035; /* Sutil y elegante para que no afecte la lectura */
+    z-index: -1;
+    pointer-events: none;
+  }
+
   /* Ajuste de diseño: paneles y secciones centrados y con ancho acotado en rectángulos */
   .container, .section, .hero .container {
     max-width: 780px !important;
