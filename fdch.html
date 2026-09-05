@@ -16,7 +16,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
+<style>
+    /* Forzar que la tarjeta que contiene la imagen de la nave elimine el padding interno para que llene todo el ancho superior */
+    article.work-card:has(.work-cover) {
+        padding: 0;
+        overflow: hidden;
+    }
+    .work-cover {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    .work-cover img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+    /* Añadir padding interno al bloque de texto de esa tarjeta específica ya que la tarjeta principal no lo tiene */
+    article.work-card:has(.work-cover) .work-info {
+        padding: 2rem;
+    }
+</style>
 </head>
 
 <body>
